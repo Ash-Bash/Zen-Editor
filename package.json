@@ -1,0 +1,23 @@
+{
+  "name": "zen-editor",
+  "version": "0.0.1",
+  "description": "A Light Weight Code Editor For All Platforms Built With Electron and NodeJS",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": ""
+  },
+  "keywords": [
+    "zen",
+    "editor",
+    "raspberrypi",
+    "raspberry",
+    "pi",
+    "windows",
+    "linux",
+    "macos",
+    "osx"
+  ],
+  "author": "Ashley James Chapman",
+  "license": "GNU"
+}
