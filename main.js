@@ -2,10 +2,14 @@ const electron = require('electron');
 const {app} = electron;
 const {BrowserWindow} = electron;
 
+const Menu = electron;
+const MenuItem = electron;
+
 var path = require('path');
 global.appRoot = path.resolve(__dirname);
 
 const delegate = require('./src/scripts/delegate.js');
+var menu = require('./src/scripts/menu.js');
 
 let app_title = "Zen Code Editor";
 let app_version = app.getVersion();
@@ -13,8 +17,12 @@ let window;
 
 function createWindow() {
     
+    //var menuItems = Menu.buildFromTemplate(menu.menuItemsData);
+    
     //Create The Browser Window
-    window = new BrowserWindow({ width: 800, height: 600 });
+    window = new BrowserWindow({ width: 1024, height: 768 });
+    
+    //window.setMenu(menuItems);
     
     //Set Title of Window.
     window.setTitle(app_title);

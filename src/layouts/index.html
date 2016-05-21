@@ -2,12 +2,61 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="../../bower_components/angular-material/angular-material.min.css">
     
+    <!-- build:js scripts/vendor.js -->
+    <script src="../../bower_components/angular/angular.js"></script>
+    <script src="../../bower_components/angular-route/angular-route.js"></script>
+    <script src="../../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../../bower_components/angular-aria/angular-aria.js"></script>
+    <script src="../../bower_components/angular-material/angular-material.js"></script>
+        
   </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+  <body ng-app="Zen-Editor">
+        <div style="width:100%" layout="row" flex layout-fill>
+            <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
+                        md-component-id="left"
+                        md-is-locked-open="$mdMedia('gt-sm')">
+
+                <md-toolbar layout="row" class="md-whiteframe-z2">
+                </md-toolbar>
+                <md-list>
+                    <md-list-item ng-repeat="it in _ctrl.customers">
+                        <md-button ng-click="_ctrl.selectCustomer(it, $index)" ng-class="{'selected' : it === _ctrl.selected }">
+                            {{it.name}}
+                        </md-button>
+                    </md-list-item>
+                </md-list>
+            </md-sidenav>
+
+            <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+
+                <md-toolbar layout="row" class="md-whiteframe-z1">
+                    <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
+                        <md-icon md-svg-icon="menu"></md-icon>
+                    </md-button>
+                    <h1>{{ _ctrl.selected.name }}</h1>
+                </md-toolbar>
+
+                <md-content flex id="content">
+                    <div layout="column" style="width:50%">
+                        <br />
+                        <md-content layout-padding class="autoScroll">
+                            
+                        </md-content>
+                    </div>
+                </md-content>
+
+            </div>
+        </div>
+        
+        <!-- Your application bootstrap  -->
+        <script type="text/javascript">    
+            /**
+             * You must include the dependency on 'ngMaterial' 
+             */
+            angular.module('Zen-Editor', ['ngMaterial']);
+        </script>
   </body>
 </html>

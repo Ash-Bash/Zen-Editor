@@ -1,5 +1,7 @@
 //Delegation Script
 
+var menu = require('./menu.js');
+
 let win;
 
 function applicationWillFinnishLoading(){
@@ -11,7 +13,7 @@ function applicationDidFinnishLoading(window){
     win = window;
     
     //Load the index.html of the app.
-    window.loadURL('file://' + appRoot + '/src/layouts/index.html');
+    win.loadURL('file://' + appRoot + '/src/layouts/index.html');
 }
     
 function applicationDidResume(){
@@ -54,6 +56,14 @@ function windowDidClose(){
     console.log('Window Did Close');
 }
 
+function getWindow(){
+    return win;
+}
+
+function getAppRoot(){
+    return appRoot;
+}
+
 module.exports = {
     applicationWillFinnishLoading: applicationWillFinnishLoading,
     
@@ -77,6 +87,10 @@ module.exports = {
     
     windowIsNotResponsive: windowIsNotResponsive,
     
-    windowDidClose: windowDidClose
+    windowDidClose: windowDidClose,
+    
+    getWindow: getWindow,
+    
+    getAppRoot: getAppRoot
     
 }

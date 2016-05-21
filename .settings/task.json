@@ -1,0 +1,13 @@
+{ 
+  "version": "0.0.1", 
+  "command": "gulp", 
+  "isShellCommand": true, 
+  "args": [ "--no-color" ], 
+  "tasks": [ 
+    { 
+      "taskName": "run", 
+      "args": [], 
+      "isBuildCommand": true 
+    } 
+  ] 
+} 
