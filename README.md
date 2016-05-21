@@ -2,7 +2,7 @@
 
 A Light Weight Code Editor For All Platforms Built With Electron and NodeJS
 
-# Devlopment & Installation
+# Development & Installation
 
 * Requires NodeJS >6.1.0
 * Requires Electron >1.1
