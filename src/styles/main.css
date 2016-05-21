@@ -14,7 +14,7 @@ html, body, div, md-tabs{
     top:0; left:0; 
     right:0; 
     bottom:0;
-    
+    border-width: 0px;
     -moz-user-select: text; 
     -webkit-user-select: text; 
     -ms-user-select: text; 
