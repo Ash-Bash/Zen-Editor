@@ -14,18 +14,20 @@ var fs = require('fs');
    this.selectedMode = 'md-scale';
    this.availableDirections = ['up', 'down', 'left', 'right'];
    this.selectedDirection = 'down';
+   
+   $scope.fileType = ".html";
     
     var tabs = [
-          { title: 'One', content: "Tabs will become paginated if there isn't enough room for them."},
-          { title: 'Two', content: "You can swipe left and right on a mobile device to change tabs."},
-          { title: 'Three', content: "You can bind the selected tab via the selected attribute on the md-tabs element."},
-          { title: 'Four', content: "If you set the selected tab binding to -1, it will leave no tab selected."},
-          { title: 'Five', content: "If you remove a tab, it will try to select a new one."},
-          { title: 'Six', content: "There's an ink bar that follows the selected tab, you can turn it off if you want."},
-          { title: 'Seven', content: "If you set ng-disabled on a tab, it becomes unselectable. If the currently selected tab becomes disabled, it will try to select the next tab."},
-          { title: 'Eight', content: "If you look at the source, you're using tabs to look at a demo for tabs. Recursion!"},
-          { title: 'Nine', content: "If you set md-theme=\"green\" on the md-tabs element, you'll get green tabs."},
-          { title: 'Ten', content: "If you're still reading this, you should just go check out the API docs for tabs!"}
+          { title: 'Start-Up', content: "", view_type: "start_menu", view: "./frames/start_menu.html"},
+          { title: 'Two', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
+          { title: 'Three', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
+          { title: 'Four', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
+          { title: 'Five', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
+          { title: 'Six', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
+          { title: 'Seven', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
+          { title: 'Eight', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
+          { title: 'Nine', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
+          { title: 'Ten', content: "", view_type: "code_editor", view: "./frames/code_editor.html"}
         ],
         selected = null,
         previous = null;
@@ -37,14 +39,23 @@ var fs = require('fs');
       if ( old + 1 && (old != current)) $log.debug('Goodbye ' + previous.title + '!');
       if ( current + 1 )                $log.debug('Hello ' + selected.title + '!');
     });
-    $scope.addTab = function (title, view) {
+    $scope.addTab = function (title, content, view_type, view) {
       view = view || title + " Content View";
-      tabs.push({ title: title, content: view, disabled: false});
+      tabs.push({ title: title, content: content, view_type: view_type, view: view, disabled: false});
     };
     $scope.removeTab = function (tab) {
       var index = tabs.indexOf(tab);
       tabs.splice(index, 1);
     };
+    
+    $scope.$on('removeTab', function(event, tab) {
+        var index = tabs.indexOf(tab);
+        tabs.splice(index, 1);
+    });
+    
+    $scope.trustSrc = function(src) {
+        return $sce.trustAsResourceUrl(src);
+    }
     
     $scope.scriptMode = "javascript";
     

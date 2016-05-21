@@ -17,12 +17,8 @@ let window;
 
 function createWindow() {
     
-    //var menuItems = Menu.buildFromTemplate(menu.menuItemsData);
-    
     //Create The Browser Window
     window = new BrowserWindow({ width: 1024, height: 768 });
-    
-    //window.setMenu(menuItems);
     
     //Set Title of Window.
     window.setTitle(app_title);
@@ -56,6 +52,9 @@ function createWindow() {
         delegate.windowDidClose();
         window = null;
     });
+    
+   //var menuItems = Menu.buildFromTemplate(menu.menuItemsData);
+   //Menu.setApplicationMenu(Menu.buildFromTemplate(menu.menuItemsData));
     
     delegate.applicationDidFinnishLoading(window);
 }
