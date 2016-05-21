@@ -34,5 +34,7 @@
       var index = tabs.indexOf(tab);
       tabs.splice(index, 1);
     };
+    
+    $scope.scriptMode = "mixedhtml";
   }
 })();

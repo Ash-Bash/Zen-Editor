@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/DynamicTabs.css">
     <script src="../scripts/controllers/EditorController.js"></script>
+    
+    <!-- Create a simple CodeMirror instance -->
+    <link rel="stylesheet" href="../../bower_components/codemirror/lib/codemirror.css">
+    <script src="../../bower_components/codemirror/lib/codemirror.js"></script>
   </head>
   <body ng-app="Zen-Editor">
         <div ng-controller="EditorController" style="width:100%" layout="row" flex layout-fill>
@@ -48,12 +52,20 @@
                     <md-tab ng-repeat="tab in tabs"
                             ng-disabled="tab.disabled"
                             label="{{tab.title}}">
-                        <div class="demo-tab tab{{$index%4}}" style="padding: 25px; text-align: center;">
-                            <md-content layout-padding class="autoScroll">
+                        <div class="demo-tab tab{{$index%4}}" style="padding: 0px; text-align: center;">
+                            <textarea id="code">if (var return) else {}</textarea> 
+                            <script>
+                                var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                                    lineNumbers: true,
+                                    mode: "mixedhtml"
+                                });
+                            </script>
+                            <!--<md-content class="autoScroll" style="padding: 0px;">
+                                 
                                 <div ng-bind="tab.content"></div>
                                 <br/>
                                 <md-button class="md-primary md-raised" ng-click="removeTab( tab )" ng-disabled="tabs.length <= 1">Remove Tab</md-button>
-                            </md-content>
+                            </md-content>-->
                         </div>
                     </md-tab>
                 </md-tabs>
