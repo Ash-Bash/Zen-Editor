@@ -1,9 +1,20 @@
+var fs = require('fs');
+
 (function () {
   'use strict';
   angular
       .module('Zen-Editor', ['ngMaterial'])
       .controller('EditorController', EditorController);
   function EditorController ($scope, $log) {
+      
+   this.topDirections = ['left', 'up'];
+   this.bottomDirections = ['down', 'right'];
+   this.isOpen = false;
+   this.availableModes = ['md-fling', 'md-scale'];
+   this.selectedMode = 'md-scale';
+   this.availableDirections = ['up', 'down', 'left', 'right'];
+   this.selectedDirection = 'down';
+    
     var tabs = [
           { title: 'One', content: "Tabs will become paginated if there isn't enough room for them."},
           { title: 'Two', content: "You can swipe left and right on a mobile device to change tabs."},
@@ -35,6 +46,7 @@
       tabs.splice(index, 1);
     };
     
-    $scope.scriptMode = "mixedhtml";
+    $scope.scriptMode = "javascript";
+    
   }
 })();

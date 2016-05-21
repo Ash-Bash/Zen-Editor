@@ -21,3 +21,9 @@ html, body, div, md-tabs{
     user-select: text;
     -o-user-select: text;
 }
+
+#FileActionButton{
+    position: fixed; 
+    top: 0; 
+    right: 0; 
+}

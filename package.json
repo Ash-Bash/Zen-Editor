@@ -1,6 +1,6 @@
 {
   "name": "zen-editor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Light Weight Code Editor For All Platforms Built With Electron and NodeJS",
   "main": "main.js",
   "scripts": {
