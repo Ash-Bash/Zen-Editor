@@ -8,6 +8,7 @@ A Light Weight Code Editor For All Platforms Built With Electron and NodeJS
 * Requires Electron >1.1
 * Requires NPM
 * Requires Bower
+* Requires Gulp
 
 After Clone
 
