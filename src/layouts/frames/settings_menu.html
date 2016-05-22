@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -17,14 +18,22 @@
     </head>
      <body ng-app="Settings-Menu">
         <div ng-controller="SettingsMenuController as SettingsMenu" style="width:100%" flex layout-fill>
-            <div flex layout="column" role="main" class="md-whiteframe-z2">
-                <md-list>
-                    <md-list-item>
-                        <md-button ng-click="" ng-class="">
-                            test
-                        </md-button>
-                    </md-list-item>
-                </md-list>
+            <div layout="column" role="main" class="md-whiteframe-z2" flex layout-fill>
+                <div id="SettingsRow" layout="row" layout-align="space-around center">
+                    <h1 class="md-title">Dark Mode</h1>
+                    <md-switch id="SettingsSwitch" class="md-primary">
+                    </md-switch>
+                </div>
+                <div id="SettingsRow" layout="row" layout-align="space-around center">
+                    <h1 class="md-title">Auto Save</h1>
+                    <md-switch id="SettingsSwitch" class="md-primary">
+                    </md-switch>
+                </div>
+                <div id="SettingsRow" layout="row" layout-align="space-around center">
+                    <h1 class="md-title">Test Item</h1>
+                    <md-switch id="SettingsSwitch" class="md-primary">
+                    </md-switch>
+                </div>
             </div>
         </div>
     </body>

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -18,10 +19,9 @@
     </head>
     <body ng-app="Start-Menu">
         <div ng-controller="StartMenuController as StartMenu" style="width:100%" flex layout-fill>
-            <div flex layout="column" role="main" class="md-whiteframe-z2"> 
-                    <h1 class="md-display-3" style="padding-left: 25px;">Start-up</h1>
-                    <h1 class="md-display-2" style="padding-left: 25px;">Welcome To Zen Code Editor</h1>
-                    <md-button class="md-raised">Primary</md-button>
+            <div layout="column" role="main" class="md-whiteframe-z2" flex layout-fill> 
+                    <h1 id="StartUpTitleHeader" class="md-display-2">Welcome To Zen Code Editor</h1>
+                    <md-button id="OpenExistingDirButton" class="md-raised md-primary">Open A Existing Directory</md-button>
             </div>
         </div>
     </body>

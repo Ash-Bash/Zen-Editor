@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -13,13 +14,13 @@
             
         <!--Controllers & Styles-->
         <link rel="stylesheet" href="../../styles/main.css">
-        <script src="../../scripts/controllers/EditorController.js"></script>
+        <script src="../../scripts/controllers/CodeEditorController.js"></script>
         
         <!-- Create a simple CodeMirror instance -->
         <link rel="stylesheet" href="../../../bower_components/codemirror/lib/codemirror.css">
         <script src="../../../bower_components/codemirror/lib/codemirror.js"></script>
     </head>
-    <body>
+    <body ng-app="Code-Editor">
         <textarea id="code">if (var return) else {}</textarea> 
         <script>
             var editor = CodeMirror.fromTextArea(document.getElementById("code"), {

@@ -1,4 +1,6 @@
 const electron = require('electron');
+const ipc = require('electron').ipcMain
+const dialog = require('electron').dialog
 const {app} = electron;
 const {BrowserWindow} = electron;
 

@@ -74,6 +74,36 @@ md-tabs, h1, span {
     bottom: 0;
 }
 
+#StartUpTitleHeader {
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#OpenExistingDirButton {
+    position: absolute;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 25px;
+    bottom: 0;
+}
+
+#SettingsRow {
+    left: 0;
+    right: 0;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#SettingsSwitch {
+    float: right;
+    right: 0 !important;
+    margin-right: 25px;
+}
+
 .CodeMirror-scroll {
     height: 100%; 
     overflow-y: auto; 
