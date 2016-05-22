@@ -13,13 +13,11 @@
             
         <!--Controllers & Styles-->
         <link rel="stylesheet" href="../../styles/main.css">
-        <script src="../../scripts/controllers/VideoViewerController.js"></script>
+        <script src="../../scripts/controllers/SettingsMenuController.js"></script>
     </head>
-     <body ng-app="Video-Viewer">
-        <div ng-controller="VideoViewerController as VideoViewer" style="width:100%" flex layout-fill>
+     <body ng-app="Settings-Menu">
+        <div ng-controller="SettingsMenuController as SettingsMenu" style="width:100%" flex layout-fill>
             <div flex layout="column" role="main" class="md-whiteframe-z2"> 
-                <video id="video-viewer" class="md-whiteframe-8dp" width="640" height="480" controls preload>
-                </video>
             </div>
         </div>
     </body>
