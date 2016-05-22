@@ -18,11 +18,11 @@ var fs = require('fs');
    $scope.fileType = ".html";
     
     var tabs = [
-          { title: 'Start-Up', content: "", view_type: "start_menu", view: "./frames/start_menu.html"},
-          { title: 'Two', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
-          { title: 'Three', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
-          { title: 'Four', content: "", view_type: "image_view", view: "./frames/image_view.html"},
-          { title: 'Five', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
+          { title: 'Start-Up Frame', content: "", view_type: "start_menu", view: "./frames/start_menu.html"},
+          { title: 'Code Editor Frame', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
+          { title: 'Image Viewer Frame', content: "", view_type: "image_view", view: "./frames/image_viewer.html"},
+          { title: 'Audio Viewer Frame', content: "", view_type: "audio_view", view: "./frames/audio_viewer.html"},
+          { title: 'Video Viewer Frame', content: "", view_type: "video_view", view: "./frames/video_viewer.html"},
           { title: 'Six', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
           { title: 'Seven', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
           { title: 'Eight', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},

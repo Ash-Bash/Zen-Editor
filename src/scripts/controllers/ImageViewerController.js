@@ -6,7 +6,6 @@ var fs = require('fs');
       .module('Image-Viewer', ['ngRoute', 'ngMaterial', 'ngAnimate'])
       .controller('ImageViewController', ImageViewController);
   function ImageViewController ($scope, $log) {
-      
-    
+          
   }
 })();

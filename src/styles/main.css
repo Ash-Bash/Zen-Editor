@@ -34,6 +34,8 @@ md-tabs, h1, span {
     top: 0; 
     right: 0;
     Z-index: -999;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
 #FabSpeedDial-View {
@@ -41,6 +43,35 @@ md-tabs, h1, span {
     top: 0; 
     right: 0;
     Z-index: 999;
+}
+
+#img-viewer{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height:80%;
+    -ms-interpolation-mode: bicubic
+}
+
+#audio-viewer {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#video-viewer {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .CodeMirror-scroll {

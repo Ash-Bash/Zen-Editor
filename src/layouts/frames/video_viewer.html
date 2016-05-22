@@ -13,12 +13,13 @@
             
         <!--Controllers & Styles-->
         <link rel="stylesheet" href="../../styles/main.css">
-        <script src="../../scripts/controllers/ImageViewerController.js"></script>
+        <script src="../../scripts/controllers/VideoViewerController.js"></script>
     </head>
      <body ng-app="Image-Viewer">
         <div ng-controller="ImageViewerController as ImageViewer" style="width:100%" flex layout-fill>
             <div flex layout="column" role="main" class="md-whiteframe-z2"> 
-                <img id="img-viewer" class="md-whiteframe-8dp" src="../../assets/img/wallpapers/space2.png"/>
+                <video id="video-viewer" class="md-whiteframe-8dp" width="640" height="480" controls preload>
+                </video>
             </div>
         </div>
     </body>
