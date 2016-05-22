@@ -21,7 +21,7 @@ var fs = require('fs');
           { title: 'Start-Up', content: "", view_type: "start_menu", view: "./frames/start_menu.html"},
           { title: 'Two', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
           { title: 'Three', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
-          { title: 'Four', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
+          { title: 'Four', content: "", view_type: "image_view", view: "./frames/image_view.html"},
           { title: 'Five', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
           { title: 'Six', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
           { title: 'Seven', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},

@@ -13,11 +13,13 @@
             
         <!--Controllers & Styles-->
         <link rel="stylesheet" href="../../styles/main.css">
-        <link rel="stylesheet" href="../../styles/DynamicTabs.css">
-        <link rel="stylesheet" href="../../styles/FABSpeedDial.css">
-        <script src="../../scripts/controllers/EditorController.js"></script>
+        <script src="../../scripts/controllers/ImageViewerController.js"></script>
     </head>
-    <body>
->
+     <body ng-app="Image-Viewer">
+        <div ng-controller="ImageViewerController as ImageViewer" style="width:100%" flex layout-fill>
+            <div flex layout="column" role="main" class="md-whiteframe-z2"> 
+                <img class="md-whiteframe-z2" src="../../assets/img/wallpapers/space2.png"/>
+            </div>
+        </div>
     </body>
 </html>

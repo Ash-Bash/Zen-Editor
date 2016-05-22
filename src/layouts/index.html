@@ -25,10 +25,38 @@
   <body ng-app="Zen-Editor">
         <div ng-controller="EditorController as Editor" style="width:100%" layout="row" flex layout-fill>
             <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z4" md-component-id="left" md-is-locked-open="true">
-
-                <md-toolbar class="md-whiteframe-z2 md-small">
+                
+                <md-toolbar class="md-hue-2 md-whiteframe-z2">
                     <div class="md-toolbar-tools">
-                        
+                        <h2>
+                            <span>Dir Name</span>
+                        </h2>
+                        <span flex></span>
+                        <md-menu md-offset="12 54">
+                            <md-button class="md-icon-button" aria-label="Add File" ng-click="$mdOpenMenu($event)">
+                                <md-icon md-svg-icon="../assets/img/icons/svgs/add_icon/ic_add_24px.svg"></md-icon>
+                            </md-button>
+                            <md-menu-content width="2">
+                                <md-menu-item>
+                                    <md-button ng-click="">
+                                        <md-icon md-menu-align-target md-svg-icon="../assets/img/icons/svgs/add_icon/ic_add_24px.svg"></md-icon>
+                                        Add New File
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="">
+                                        <md-icon md-menu-align-target md-svg-icon="../assets/img/icons/svgs/existing_icon/ic_add_box_24px.svg"></md-icon>
+                                        Add Existing File
+                                    </md-button>
+                                </md-menu-item>
+                            </md-menu-content>
+                        </md-menu>
+                        <md-button class="md-icon-button" aria-label="Add Folder">
+                            <md-icon md-svg-icon="../assets/img/icons/svgs/newfolder_icon/ic_create_new_folder_24px.svg"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="Refresh">
+                            <md-icon md-svg-icon="../assets/img/icons/svgs/refresh_icon/ic_refresh_18px.svg"></md-icon>
+                        </md-button>
                     </div>
                 </md-toolbar>
 
