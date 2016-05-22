@@ -2,7 +2,7 @@ const electron = require('electron');
 const {app} = electron;
 const {BrowserWindow} = electron;
 
-const Menu = electron;
+const Menu = electron.Menu;
 const MenuItem = electron;
 
 var path = require('path');
@@ -54,7 +54,7 @@ function createWindow() {
     });
     
    //var menuItems = Menu.buildFromTemplate(menu.menuItemsData);
-   //Menu.setApplicationMenu(Menu.buildFromTemplate(menu.menuItemsData));
+   Menu.setApplicationMenu(Menu.buildFromTemplate(menu.menuItemsData));
     
     delegate.applicationDidFinnishLoading(window);
 }
