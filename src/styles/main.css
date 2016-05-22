@@ -1,4 +1,4 @@
-md-tabs{
+md-tabs, h1 {
     -moz-user-select: none; 
     -webkit-user-select: none; 
     -ms-user-select:none; 
@@ -51,4 +51,9 @@ md-tabs{
 
 .CodeMirror {
     height: 100% !important;
+}
+
+md-toolbar {
+    height: 48px !important;
+    min-height: 48px !important;
 }

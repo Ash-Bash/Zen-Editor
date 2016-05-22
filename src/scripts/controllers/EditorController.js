@@ -3,7 +3,7 @@ var fs = require('fs');
 (function () {
   'use strict';
   angular
-      .module('Zen-Editor', ['ngMaterial'])
+      .module('Zen-Editor', ['ngRoute', 'ngMaterial', 'ngAnimate'])
       .controller('EditorController', EditorController);
   function EditorController ($scope, $log) {
       
