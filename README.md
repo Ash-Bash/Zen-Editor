@@ -32,6 +32,7 @@ Project-Only
 * asar
 * fs-jetpack
 * gulp-electron
+* remote
 
 Bower Components
 

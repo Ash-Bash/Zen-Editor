@@ -25,7 +25,8 @@
   "author": "Ashley James Chapman",
   "license": "GNU",
   "dependencies": {
-    "editor-framework": "^0.6.0"
+    "editor-framework": "^0.6.0",
+    "remote": "^0.2.6"
   },
   "devDependencies": {
     "asar": "^0.11.0",

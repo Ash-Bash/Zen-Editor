@@ -13,8 +13,6 @@
    this.selectedMode = 'md-scale';
    this.availableDirections = ['up', 'down', 'left', 'right'];
    this.selectedDirection = 'down';
-   
-   $scope.fileType = ".html";
     
     var tabs = [
           { title: 'Start-Up Frame', content: "", view_type: "start_menu", view: "./frames/start_menu.html"},
@@ -22,11 +20,7 @@
           { title: 'Image Viewer Frame', content: "", view_type: "image_view", view: "./frames/image_viewer.html"},
           { title: 'Audio Viewer Frame', content: "", view_type: "audio_view", view: "./frames/audio_viewer.html"},
           { title: 'Video Viewer Frame', content: "", view_type: "video_view", view: "./frames/video_viewer.html"},
-          { title: 'Settings Frame', content: "", view_type: "settings_menu", view: "./frames/settings_menu.html"},
-          { title: 'Seven', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
-          { title: 'Eight', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
-          { title: 'Nine', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
-          { title: 'Ten', content: "", view_type: "code_editor", view: "./frames/code_editor.html"}
+          { title: 'Settings Frame', content: "", view_type: "settings_menu", view: "./frames/settings_menu.html"}
         ],
         selected = null,
         previous = null;
