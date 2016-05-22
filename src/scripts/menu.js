@@ -7,17 +7,17 @@ var template = [
       submenu: [
         {
           label: 'New File',
-          accelerator: '',
+          accelerator: 'CmdOrCtrl+N',
           role: ''
         },
         {
           label: 'New Folder',
-          accelerator: '',
+          accelerator: 'Shift+CmdOrCtrl+N',
           role: ''
         },
         {
           label: 'New Window',
-          accelerator: '',
+          accelerator: 'Shift+CmdOrCtrl+W',
           role: ''
         },
         {
@@ -25,7 +25,7 @@ var template = [
         },
         {
           label: 'Open File...',
-          accelerator: '',
+          accelerator: 'CmdOrCtrl+O',
           role: ''
         },
         {
@@ -43,12 +43,12 @@ var template = [
         },
         {
           label: 'Save',
-          accelerator: '',
+          accelerator: 'CmdOrCtrl+S',
           role: ''
         },
         {
           label: 'Save As...',
-          accelerator: '',
+          accelerator: 'Shift+CmdOrCtrl+S',
           role: ''
         },
         {
@@ -74,7 +74,7 @@ var template = [
         },
         {
           label: 'Close Editor',
-          accelerator: '',
+          accelerator: 'CmdOrCtrl+F4',
           role: ''
         },
         {
@@ -83,16 +83,11 @@ var template = [
           role: ''
         },
         {
-          label: 'Close Folder',
-          accelerator: '',
-          role: ''
-        }, 
-        {
           type: 'separator'
         },
         {
-          label: 'Close',
-          accelerator: '',
+          label: 'Quit',
+          accelerator: 'CmdOrCtrl+Esc',
           role: ''
         },
       ]
@@ -100,6 +95,14 @@ var template = [
     {
       label: 'Edit',
       submenu: [
+        {
+          label: 'Close Tab',
+          accelerator: 'Shift+CmdOrCtrl+T',
+          role: ''
+        },
+        {
+          type: 'separator'
+        },
         {
           label: 'Undo',
           accelerator: 'CmdOrCtrl+Z',
