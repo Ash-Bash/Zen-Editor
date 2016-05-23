@@ -15,12 +15,12 @@
    this.selectedDirection = 'down';
     
     var tabs = [
-          { title: 'Start-Up Frame', content: "", view_type: "start_menu", view: "./frames/start_menu.html"},
-          { title: 'Code Editor Frame', content: "", view_type: "code_editor", view: "./frames/code_editor.html"},
-          { title: 'Image Viewer Frame', content: "", view_type: "image_view", view: "./frames/image_viewer.html"},
-          { title: 'Audio Viewer Frame', content: "", view_type: "audio_view", view: "./frames/audio_viewer.html"},
-          { title: 'Video Viewer Frame', content: "", view_type: "video_view", view: "./frames/video_viewer.html"},
-          { title: 'Settings Frame', content: "", view_type: "settings_menu", view: "./frames/settings_menu.html"}
+          { title: 'Start-Up Frame', content: "", view_type: "menu", view: "./frames/start_menu.html"},
+          { title: 'Code Editor Frame', content: "", view_type: "editor", view: "./frames/code_editor.html"},
+          { title: 'Image Viewer Frame', content: "", view_type: "viewer", view: "./frames/image_viewer.html"},
+          { title: 'Audio Viewer Frame', content: "", view_type: "viewer", view: "./frames/audio_viewer.html"},
+          { title: 'Video Viewer Frame', content: "", view_type: "viewer", view: "./frames/video_viewer.html"},
+          { title: 'Settings Frame', content: "", view_type: "menu", view: "./frames/settings_menu.html"}
         ],
         selected = null,
         previous = null;
@@ -45,6 +45,24 @@
         var index = tabs.indexOf(tab);
         tabs.splice(index, 1);
     });
+    
+    $scope.hideEditorControls = function(view_type) {       
+      if (view_type == "editor"){
+        return false;
+      }
+      else{
+        return true;
+      }            
+    }
+    
+    $scope.hideInfomationControls = function(view_type) {       
+      if (view_type == "viewer" || view_type == "editor"){
+        return false;
+      }
+      else{
+        return true;
+      }            
+    }
     
     $scope.trustSrc = function(src) {
         return $sce.trustAsResourceUrl(src);

@@ -35,6 +35,9 @@
                         <md-menu md-offset="12 54">
                             <md-button class="md-icon-button" aria-label="Add File" ng-click="$mdOpenMenu($event)">
                                 <md-icon md-svg-icon="../assets/img/icons/svgs/add_icon/ic_add_24px.svg"></md-icon>
+                                <md-tooltip md-visible="false" md-direction="bottom">
+                                    Add A File
+                                </md-tooltip>
                             </md-button>
                             <md-menu-content width="2">
                                 <md-menu-item>
@@ -53,9 +56,15 @@
                         </md-menu>
                         <md-button class="md-icon-button" aria-label="Add Folder">
                             <md-icon md-svg-icon="../assets/img/icons/svgs/newfolder_icon/ic_create_new_folder_24px.svg"></md-icon>
+                            <md-tooltip md-visible="false" md-direction="bottom">
+                                Add A Folder
+                            </md-tooltip>
                         </md-button>
                         <md-button class="md-icon-button" aria-label="Refresh">
                             <md-icon md-svg-icon="../assets/img/icons/svgs/refresh_icon/ic_refresh_18px.svg"></md-icon>
+                            <md-tooltip md-visible="false" md-direction="bottom">
+                                Reload
+                            </md-tooltip>
                         </md-button>
                     </div>
                 </md-toolbar>
@@ -81,26 +90,47 @@
                                     <md-fab-trigger>
                                     <md-button aria-label="menu" class="md-fab md-primary">
                                         <md-icon md-svg-src="../assets/img/icons/svgs/menu_icon/ic_menu_18px.svg"></md-icon>
+                                        <md-tooltip md-visible="false" md-direction="left">
+                                            Menu
+                                        </md-tooltip>
                                     </md-button>
                                     </md-fab-trigger>
                                     <md-fab-actions>
-                                    <md-button aria-label="Undo" class="md-fab md-primary">
+                                    <md-button aria-label="Undo" class="md-fab md-primary" ng-hide="hideEditorControls(tab.view_type)">
                                         <md-icon md-svg-src="../assets/img/icons/svgs/undo_icon/ic_undo_24px.svg" aria-label="Undo"></md-icon>
+                                        <md-tooltip md-visible="false" md-direction="left">
+                                            Undo
+                                        </md-tooltip>
                                     </md-button>
-                                    <md-button aria-label="Redo" class="md-fab md-primary">
+                                    <md-button aria-label="Redo" class="md-fab md-primary" ng-hide="hideEditorControls(tab.view_type)">
                                         <md-icon md-svg-src="../assets/img/icons/svgs/redo_icon/ic_redo_24px.svg" aria-label="Redo"></md-icon>
+                                        <md-tooltip md-visible="false" md-direction="left">
+                                            Redo
+                                        </md-tooltip>
                                     </md-button>
-                                    <md-button aria-label="Save" class="md-fab md-primary">
+                                    <md-button aria-label="Save" class="md-fab md-primary" ng-hide="hideEditorControls(tab.view_type)">
                                         <md-icon md-svg-src="../assets/img/icons/svgs/save_icon/ic_save_24px.svg" aria-label="Save"></md-icon>
+                                        <md-tooltip md-visible="false" md-direction="left">
+                                            Save
+                                        </md-tooltip>
                                     </md-button>
-                                    <md-button aria-label="Search" class="md-fab md-primary">
+                                    <md-button aria-label="Search" class="md-fab md-primary" ng-hide="hideEditorControls(tab.view_type)">
                                         <md-icon md-svg-src="../assets/img/icons/svgs/search_icon/ic_search_24px.svg" aria-label="Search"></md-icon>
+                                        <md-tooltip md-visible="false" md-direction="left">
+                                            Search
+                                        </md-tooltip>
                                     </md-button>
-                                    <md-button aria-label="About File" class="md-fab md-primary">
+                                    <md-button aria-label="About File" class="md-fab md-primary" ng-hide="hideInfomationControls(tab.view_type)">
                                         <md-icon md-svg-src="../assets/img/icons/svgs/help_icon/ic_help_outline_24px.svg" aria-label="About File"></md-icon>
+                                        <md-tooltip md-visible="false" md-direction="left">
+                                            About File
+                                        </md-tooltip>
                                     </md-button>
                                     <md-button aria-label="Close Tab" class="md-fab md-primary" ng-click="removeTab( tab )" ng-disabled="tabs.length <= 1">
                                         <md-icon md-svg-src="../assets/img/icons/svgs/cancel_icon/ic_cancel_18px.svg" aria-label="Close Tab"></md-icon>
+                                        <md-tooltip md-visible="false" md-direction="left">
+                                            Close Tab
+                                        </md-tooltip>
                                     </md-button>
                                     </md-fab-actions>
                                 </md-fab-speed-dial>  
