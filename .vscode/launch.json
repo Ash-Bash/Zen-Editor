@@ -1,69 +1,17 @@
 {
     "version": "0.2.0",
     "configurations": [
-        {
-            "name": "Launch",
+        { 
+            "name": "Launch Zen-Editor App",
             "type": "node",
-            "request": "launch",
-            "program": "${workspaceRoot}/main.js",
+            "program": "${workspaceRoot}/src/main.js", // important
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
-            "preLaunchTask": null,
-            "runtimeExecutable": null,
-            "runtimeArgs": [
-                "--nolazy"
-            ],
-            "env": {
-                "NODE_ENV": "development"
-            },
-            "externalConsole": false,
-            "sourceMaps": false,
-            "outDir": null
-        },
-        {
-            "name": "Launch Zen Editor",
-            "type": "node",
-            "request": "launch",
-            "program": "${workspaceRoot}/main.js",
-            "stopOnEntry": false,
-            "args": [],
-            "cwd": "${workspaceRoot}",
-            "preLaunchTask": null,
-            "runtimeExecutable": null,
-            "runtimeArgs": [
-                "--nolazy"
-            ],
-            "env": {
-                "NODE_ENV": "development"
-            },
-            "externalConsole": false,
-            "sourceMaps": false,
-            "outDir": null
-        },
-        {
-            "name": "Attach",
-            "type": "node",
-            "request": "attach",
-            "port": 5858,
-            "address": "localhost",
-            "restart": false,
-            "sourceMaps": false,
-            "outDir": null,
-            "localRoot": "${workspaceRoot}",
-            "remoteRoot": null
-        },
-        {
-            "name": "Attach Zen Editor",
-            "type": "node",
-            "request": "attach",
-            "port": 5858,
-            "address": "localhost",
-            "restart": false,
-            "sourceMaps": false,
-            "outDir": null,
-            "localRoot": "${workspaceRoot}",
-            "remoteRoot": null
+            // next line is very important
+            "runtimeExecutable": "${workspaceRoot}/node_modules/electron-prebuilt/dist/electron.exe",
+            "env": { }, 
+            "sourceMaps": false
         }
     ]
 }

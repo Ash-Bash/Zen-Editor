@@ -1,6 +1,6 @@
 const electron = require('electron');
-const ipc = require('electron').ipcMain
-const dialog = require('electron').dialog
+const ipc = require('electron').ipcMain;
+const dialog = electron.dialog;
 const {app} = electron;
 const {BrowserWindow} = electron;
 
@@ -108,3 +108,14 @@ ipc.on('open-file-dialog', function (event) {
     if (files) event.sender.send('OpenExistingDirButton', files)
   })
 })
+
+function selectDirectory() {
+  dialog.showOpenDialog(mainWindow, {
+    properties: ['openDirectory']
+  })
+}
+
+exports.selectDirectory = function () {
+  // dialog.showOpenDialog as before
+
+}

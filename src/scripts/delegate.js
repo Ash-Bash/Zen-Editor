@@ -1,7 +1,5 @@
 //Delegation Script
 
-var menu = require('./menu.js');
-
 let win;
 
 function applicationWillFinnishLoading(){
