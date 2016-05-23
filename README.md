@@ -33,6 +33,9 @@ Project-Only
 * fs-jetpack
 * gulp-electron
 * remote
+* electron-compile
+* electron-compilers
+* babel-cli
 
 Bower Components
 

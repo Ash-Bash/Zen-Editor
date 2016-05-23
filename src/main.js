@@ -10,8 +10,8 @@ const MenuItem = electron;
 var path = require('path');
 global.appRoot = path.resolve(__dirname);
 
-const delegate = require('./src/scripts/delegate.js');
-var menu = require('./src/scripts/menu.js');
+const delegate = require('./scripts/delegate.js');
+var menu = require('./scripts/menu.js');
 
 let app_title = "Zen Code Editor";
 let app_version = app.getVersion();
