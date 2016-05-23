@@ -15,12 +15,12 @@
    this.selectedDirection = 'down';
     
     var tabs = [
-          { title: 'Start-Up Frame', content: "", view_type: "menu", view: "./frames/start_menu.html"},
-          { title: 'Code Editor Frame', content: "", view_type: "editor", view: "./frames/code_editor.html"},
-          { title: 'Image Viewer Frame', content: "", view_type: "viewer", view: "./frames/image_viewer.html"},
-          { title: 'Audio Viewer Frame', content: "", view_type: "viewer", view: "./frames/audio_viewer.html"},
-          { title: 'Video Viewer Frame', content: "", view_type: "viewer", view: "./frames/video_viewer.html"},
-          { title: 'Settings Frame', content: "", view_type: "menu", view: "./frames/settings_menu.html"}
+          { title: 'Start-Up Frame', content: '', view_type: "menu", view: "./frames/start_menu.html"},
+          { title: 'Code Editor Frame', content: '', view_type: "editor", view: "./frames/code_editor.html"},
+          { title: 'Image Viewer Frame', content: '', view_type: "viewer", view: "./frames/image_viewer.html"},
+          { title: 'Audio Viewer Frame', content: '', view_type: "viewer", view: "./frames/audio_viewer.html"},
+          { title: 'Video Viewer Frame', content: '', view_type: "viewer", view: "./frames/video_viewer.html"},
+          { title: 'Settings Frame', content: '', view_type: "menu", view: "./frames/settings_menu.html"}
         ],
         selected = null,
         previous = null;
@@ -69,6 +69,12 @@
     }
     
     $scope.scriptMode = "javascript";
+    
+    var directory = ""
+    var dirData = [
+      { name: 'Test Folder', dir: 'C://TestProject/Test Folder', type: 'folder', format: 'none'},
+      { name: 'Test_File.txt', dir: 'C://TestProject/Test_File', type: 'file', format: 'txt'}
+    ];
     
   }
 })();

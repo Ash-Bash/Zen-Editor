@@ -1,4 +1,4 @@
-md-tabs, h1, span {
+md-tabs, h1, span, img {
     -moz-user-select: none; 
     -webkit-user-select: none; 
     -ms-user-select:none; 
@@ -102,6 +102,9 @@ md-tabs, h1, span {
     float: right;
     right: 0 !important;
     margin-right: 25px;
+}
+.listtem-img path {
+  fill: #999999;
 }
 
 .CodeMirror-scroll {
