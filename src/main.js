@@ -1,5 +1,12 @@
-const electron = require('electron');
-const ipc = require('electron').ipcMain;
+//const electron = require('electron');
+import electron from 'electron';
+import path from 'path';
+import delegate from './scripts/delegate.js';
+import menu from './scripts/menu.js';
+//import renderer from './scripts/renderer.js';
+
+const ipc = electron.icpMain;
+
 const dialog = electron.dialog;
 const {app} = electron;
 const {BrowserWindow} = electron;
@@ -7,11 +14,11 @@ const {BrowserWindow} = electron;
 const Menu = electron.Menu;
 const MenuItem = electron;
 
-var path = require('path');
+//var path = require('path');
 global.appRoot = path.resolve(__dirname);
 
-const delegate = require('./scripts/delegate.js');
-var menu = require('./scripts/menu.js');
+//const delegate = require('./scripts/delegate.js');
+//var menu = require('./scripts/menu.js');
 
 let app_title = "Zen Code Editor";
 let app_version = app.getVersion();

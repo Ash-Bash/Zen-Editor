@@ -1,3 +1,4 @@
+//Start Menu Controller Script
 
 (function () {
   'use strict';

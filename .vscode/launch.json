@@ -8,8 +8,22 @@
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
+            "request": "launch",
             // next line is very important
             "runtimeExecutable": "${workspaceRoot}/node_modules/electron-prebuilt/dist/electron.exe",
+            "env": { }, 
+            "sourceMaps": false
+        },
+        { 
+            "name": "Launch Zen-Editor App For ES6",
+            "type": "node",
+            "program": "${workspaceRoot}/src/main.js", // important
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "request": "launch",
+            // next line is very important
+            "runtimeExecutable": "${workspaceRoot}/node_modules/electron-prebuilt-compile/node_modules/electron-prebuilt/dist/electron.exe",
             "env": { }, 
             "sourceMaps": false
         }

@@ -1,0 +1,95 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'i',
+1 verbose cli   '-S',
+1 verbose cli   'babel-{loader,plugin-{add-module-exports,react-html-attrs,transform-{class-properties,decorators-legacy}},preset-{es2015,react,stage-0}}',
+1 verbose cli   'react{,-dom}',
+1 verbose cli   'webpack{,-dev-server}﻿' ]
+2 info using npm@3.8.9
+3 info using node@v6.2.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData babel-{loader,plugin-{add-module-exports,react-html-attrs,transform-{class-properties,decorators-legacy}},preset-{es2015,react,stage-0}}
+8 silly fetchPackageMetaData react{,-dom}
+9 silly fetchPackageMetaData webpack{,-dev-server}
+10 silly fetchOtherPackageData babel-{loader,plugin-{add-module-exports,react-html-attrs,transform-{class-properties,decorators-legacy}},preset-{es2015,react,stage-0}}
+11 silly cache add args [ 'babel-{loader,plugin-{add-module-exports,react-html-attrs,transform-{class-properties,decorators-legacy}},preset-{es2015,react,stage-0}}',
+11 silly cache add   null ]
+12 verbose cache add spec babel-{loader,plugin-{add-module-exports,react-html-attrs,transform-{class-properties,decorators-legacy}},preset-{es2015,react,stage-0}}
+13 silly fetchOtherPackageData react{,-dom}
+14 silly cache add args [ 'react{,-dom}', null ]
+15 verbose cache add spec react{,-dom}
+16 silly fetchOtherPackageData webpack{,-dev-server}
+17 silly cache add args [ 'webpack{,-dev-server}', null ]
+18 verbose cache add spec webpack{,-dev-server}
+19 silly cache add parsed spec Result {
+19 silly cache add   raw: 'babel-{loader,plugin-{add-module-exports,react-html-attrs,transform-{class-properties,decorators-legacy}},preset-{es2015,react,stage-0}}',
+19 silly cache add   scope: null,
+19 silly cache add   name: null,
+19 silly cache add   rawSpec: 'babel-{loader,plugin-{add-module-exports,react-html-attrs,transform-{class-properties,decorators-legacy}},preset-{es2015,react,stage-0}}',
+19 silly cache add   spec: 'C:\\Users\\Ashley Chapman\\Electron-Projects\\Zen-Editor\\babel-{loader,plugin-{add-module-exports,react-html-attrs,transform-{class-properties,decorators-legacy}},preset-{es2015,react,stage-0}}',
+19 silly cache add   type: 'local' }
+20 silly cache add parsed spec Result {
+20 silly cache add   raw: 'react{,-dom}',
+20 silly cache add   scope: null,
+20 silly cache add   name: null,
+20 silly cache add   rawSpec: 'react{,-dom}',
+20 silly cache add   spec: 'C:\\Users\\Ashley Chapman\\Electron-Projects\\Zen-Editor\\react{,-dom}',
+20 silly cache add   type: 'local' }
+21 silly cache add parsed spec Result {
+21 silly cache add   raw: 'webpack{,-dev-server}',
+21 silly cache add   scope: null,
+21 silly cache add   name: null,
+21 silly cache add   rawSpec: 'webpack{,-dev-server}',
+21 silly cache add   spec: 'C:\\Users\\Ashley Chapman\\Electron-Projects\\Zen-Editor\\webpack{,-dev-server}',
+21 silly cache add   type: 'local' }
+22 error addLocal Could not install C:\Users\Ashley Chapman\Electron-Projects\Zen-Editor\babel-{loader,plugin-{add-module-exports,react-html-attrs,transform-{class-properties,decorators-legacy}},preset-{es2015,react,stage-0}}
+23 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open 'C:\Users\Ashley Chapman\Electron-Projects\Zen-Editor\babel-{loader,plugin-{add-module-exports,react-html-attrs,transform-{class-properties,decorators-legacy}},preset-{es2015,react,stage-0}}'
+23 silly fetchPackageMetaData     at Error (native)
+23 silly fetchPackageMetaData  error for babel-{loader,plugin-{add-module-exports,react-html-attrs,transform-{class-properties,decorators-legacy}},preset-{es2015,react,stage-0}} { Error: ENOENT: no such file or directory, open 'C:\Users\Ashley Chapman\Electron-Projects\Zen-Editor\babel-{loader,plugin-{add-module-exports,react-html-attrs,transform-{class-properties,decorators-legacy}},preset-{es2015,react,stage-0}}'
+23 silly fetchPackageMetaData     at Error (native)
+23 silly fetchPackageMetaData   errno: -4058,
+23 silly fetchPackageMetaData   code: 'ENOENT',
+23 silly fetchPackageMetaData   syscall: 'open',
+23 silly fetchPackageMetaData   path: 'C:\\Users\\Ashley Chapman\\Electron-Projects\\Zen-Editor\\babel-{loader,plugin-{add-module-exports,react-html-attrs,transform-{class-properties,decorators-legacy}},preset-{es2015,react,stage-0}}' }
+24 error addLocal Could not install C:\Users\Ashley Chapman\Electron-Projects\Zen-Editor\react{,-dom}
+25 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open 'C:\Users\Ashley Chapman\Electron-Projects\Zen-Editor\react{,-dom}'
+25 silly fetchPackageMetaData     at Error (native)
+25 silly fetchPackageMetaData  error for react{,-dom} { Error: ENOENT: no such file or directory, open 'C:\Users\Ashley Chapman\Electron-Projects\Zen-Editor\react{,-dom}'
+25 silly fetchPackageMetaData     at Error (native)
+25 silly fetchPackageMetaData   errno: -4058,
+25 silly fetchPackageMetaData   code: 'ENOENT',
+25 silly fetchPackageMetaData   syscall: 'open',
+25 silly fetchPackageMetaData   path: 'C:\\Users\\Ashley Chapman\\Electron-Projects\\Zen-Editor\\react{,-dom}' }
+26 error addLocal Could not install C:\Users\Ashley Chapman\Electron-Projects\Zen-Editor\webpack{,-dev-server}
+27 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open 'C:\Users\Ashley Chapman\Electron-Projects\Zen-Editor\webpack{,-dev-server}'
+27 silly fetchPackageMetaData     at Error (native)
+27 silly fetchPackageMetaData  error for webpack{,-dev-server} { Error: ENOENT: no such file or directory, open 'C:\Users\Ashley Chapman\Electron-Projects\Zen-Editor\webpack{,-dev-server}'
+27 silly fetchPackageMetaData     at Error (native)
+27 silly fetchPackageMetaData   errno: -4058,
+27 silly fetchPackageMetaData   code: 'ENOENT',
+27 silly fetchPackageMetaData   syscall: 'open',
+27 silly fetchPackageMetaData   path: 'C:\\Users\\Ashley Chapman\\Electron-Projects\\Zen-Editor\\webpack{,-dev-server}' }
+28 silly rollbackFailedOptional Starting
+29 silly rollbackFailedOptional Finishing
+30 silly runTopLevelLifecycles Starting
+31 silly runTopLevelLifecycles Finishing
+32 silly install printInstalled
+33 verbose stack Error: ENOENT: no such file or directory, open 'C:\Users\Ashley Chapman\Electron-Projects\Zen-Editor\babel-{loader,plugin-{add-module-exports,react-html-attrs,transform-{class-properties,decorators-legacy}},preset-{es2015,react,stage-0}}'
+33 verbose stack     at Error (native)
+34 verbose cwd C:\Users\Ashley Chapman\Electron-Projects\Zen-Editor
+35 error Windows_NT 10.0.14342
+36 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "i" "-S" "babel-{loader,plugin-{add-module-exports,react-html-attrs,transform-{class-properties,decorators-legacy}},preset-{es2015,react,stage-0}}" "react{,-dom}" "webpack{,-dev-server}﻿"
+37 error node v6.2.0
+38 error npm  v3.8.9
+39 error path C:\Users\Ashley Chapman\Electron-Projects\Zen-Editor\babel-{loader,plugin-{add-module-exports,react-html-attrs,transform-{class-properties,decorators-legacy}},preset-{es2015,react,stage-0}}
+40 error code ENOENT
+41 error errno -4058
+42 error syscall open
+43 error enoent ENOENT: no such file or directory, open 'C:\Users\Ashley Chapman\Electron-Projects\Zen-Editor\babel-{loader,plugin-{add-module-exports,react-html-attrs,transform-{class-properties,decorators-legacy}},preset-{es2015,react,stage-0}}'
+44 error enoent ENOENT: no such file or directory, open 'C:\Users\Ashley Chapman\Electron-Projects\Zen-Editor\babel-{loader,plugin-{add-module-exports,react-html-attrs,transform-{class-properties,decorators-legacy}},preset-{es2015,react,stage-0}}'
+44 error enoent This is most likely not a problem with npm itself
+44 error enoent and is related to npm not being able to find a file.
+45 verbose exit [ -4058, true ]

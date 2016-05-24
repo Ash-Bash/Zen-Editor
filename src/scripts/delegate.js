@@ -11,7 +11,7 @@ function applicationDidFinnishLoading(window){
     win = window;
     
     //Load the index.html of the app.
-    win.loadURL('file://' + appRoot + '/layouts/index.html');
+    win.loadURL('file://' + appRoot + '/layouts/editor_shell-v1.html');
 }
     
 function applicationDidResume(){

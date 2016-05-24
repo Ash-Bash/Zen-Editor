@@ -16,7 +16,6 @@
         <!--Controllers & Styles-->
         <link rel="stylesheet" href="../../styles/main.css">
         <script src="../../scripts/controllers/StartMenuController.js"></script>
-        <!--<script src="../../scripts/renderer.js"></script>-->
         
     </head>
     <body ng-app="Start-Menu">
@@ -26,5 +25,10 @@
                     <md-button id="OpenExistingDirButton" class="md-raised md-primary">Open A Existing Directory</md-button>
             </div>
         </div>
+        
+        <script>
+            // You can also require other files to run in this process
+            require('../../scripts/renderer.js')
+        </script>
     </body>
 </html>
