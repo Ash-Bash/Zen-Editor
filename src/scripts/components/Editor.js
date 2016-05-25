@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SidePane from './SidePane.js';
+
 export default class Editor extends React.Component {
 
   render(){
@@ -20,6 +22,7 @@ export default class Editor extends React.Component {
     return (
       <div className="EditorComponent">
         <div className="SidePane" style={sidePaneThemeStyle}>
+          <SidePane/>
         </div>
         <div className="Content" style={contentThemeStyle}>
         </div>

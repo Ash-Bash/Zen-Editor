@@ -31,6 +31,11 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    modulesDirectories: ['node_modules'],
+    alias: {},
+    extensions: ['', '.jsx', '.js']
+  },
   output: {
     path: __dirname + "/src/scripts",
     filename: "app.min.js"
