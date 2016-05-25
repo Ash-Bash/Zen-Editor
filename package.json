@@ -69,6 +69,7 @@
     "electron-packager": "^7.0.2",
     "electron-prebuilt": "^1.1.1",
     "electron-prebuilt-compile": "^1.1.2",
+    "file-loader": "^0.8.5",
     "fs-jetpack": "^0.9.0",
     "gulp": "^3.9.1",
     "gulp-electron": "^0.1.3",

@@ -9,11 +9,11 @@ function applicationWillFinnishLoading(){
 function applicationDidFinnishLoading(window){
     console.log('Application Did Finnish Loading');
     win = window;
-    
+
     //Load the index.html of the app.
-    win.loadURL('file://' + appRoot + '/layouts/editor_shell-v1.html');
+    win.loadURL('file://' + appRoot + '/layouts/editor_shell-react-v1.html');
 }
-    
+
 function applicationDidResume(){
     console.log('Application Did Resume');
 }
@@ -21,7 +21,7 @@ function applicationDidResume(){
 function applicationWillClose(){
     console.log('Application Will Close');
 }
-    
+
 function applicationDidClose(){
     console.log('Application Did Close');
 }
@@ -64,31 +64,31 @@ function getAppRoot(){
 
 module.exports = {
     applicationWillFinnishLoading: applicationWillFinnishLoading,
-    
+
     applicationDidFinnishLoading: applicationDidFinnishLoading,
-    
+
     applicationDidResume: applicationDidResume,
-    
+
     applicationWillClose: applicationWillClose,
-    
+
     applicationDidClose: applicationDidClose,
-    
+
     windowDidMaximize: windowDidMaximize,
-    
+
     windowDidUnmaxinmized: windowDidUnmaxinmized,
-    
+
     windowDidResume: windowDidResume,
-    
+
     windowDidPause: windowDidPause,
-    
+
     windowIsResponsive: windowIsResponsive,
-    
+
     windowIsNotResponsive: windowIsNotResponsive,
-    
+
     windowDidClose: windowDidClose,
-    
+
     getWindow: getWindow,
-    
+
     getAppRoot: getAppRoot
-    
+
 }
