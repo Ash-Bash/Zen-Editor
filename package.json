@@ -5,7 +5,8 @@
   "main": "./src/main.js",
   "scripts": {
     "start": "electron .",
-    "dev-start": "webpack && npm start",
+    "debug": "webpack && npm start",
+    "dev-watch": "webpack -w",
     "build": "electron-packager . Zen-Editor --platform=win32 --arch=x64"
   },
   "keywords": [

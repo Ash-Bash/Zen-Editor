@@ -1,8 +1,8 @@
 //const electron = require('electron');
-import electron from 'electron';
-import path from 'path';
-import delegate from './scripts/delegate.js';
-import menu from './scripts/menu.js';
+const electron = require('electron');
+const delegate = require('./scripts/delegate.js');
+const menu = require('./scripts/menu.js');
+const path = require('path');
 //import renderer from './scripts/renderer.js';
 
 const ipc = electron.icpMain;
@@ -25,46 +25,47 @@ let app_version = app.getVersion();
 let window;
 
 function createWindow() {
-    
+
     //Create The Browser Window
-    window = new BrowserWindow({ width: 1024, height: 768 });
-    
+    window = new BrowserWindow({ width: 1024, height: 768});
+    window.setMinimumSize(1024, 768);
+
     //Set Title of Window.
     window.setTitle(app_title);
-    
+
     //Emitted When The Window Is Closed.
     window.on('responsive', () => {
         delegate.windowIsResponsive();
     });
-    
+
     window.on('unresponsive', () => {
         delegate.windowIsNotResponsive();
     });
-    
+
     window.on('restore', () => {
         delegate.windowDidResume();
     });
-    
+
     window.on('hide', () => {
         delegate.windowDidPause();
     });
-    
+
     window.on('maximize', () => {
         delegate.windowDidMaximize();
     });
-    
+
     window.on('unmaximize', () => {
         delegate.windowDidUnmaxinmized();
     });
-    
+
     window.on('closed', () => {
         delegate.windowDidClose();
         window = null;
     });
-    
+
    //var menuItems = Menu.buildFromTemplate(menu.menuItemsData);
    Menu.setApplicationMenu(Menu.buildFromTemplate(menu.menuItemsData));
-    
+
     delegate.applicationDidFinnishLoading(window);
 }
 
@@ -77,7 +78,7 @@ app.on('will-finish-launching', () => {
     console.log('Developed By: Ashley James Chapman');
     console.log('-----------------------------------');
     console.log(' ');
-    
+
     delegate.applicationWillFinnishLoading();
 });
 
@@ -99,16 +100,16 @@ app.on('will-quit', () => {
 });
 
 app.on('activate', () => {
-    
+
     delegate.applicationDidResume();
-    
+
     //Dock Icon Is Clicked And There Are No Other Windows Open.
     if (window == null){
         createWindow();
     }
 });
 
-ipc.on('open-file-dialog', function (event) {
+/*ipc.on('open-file-dialog', function (event) {
   dialog.showOpenDialog({
     properties: ['openFile', 'openDirectory']
   }, function (files) {
@@ -125,4 +126,4 @@ function selectDirectory() {
 exports.selectDirectory = function () {
   // dialog.showOpenDialog as before
 
-}
+}*/
