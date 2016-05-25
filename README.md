@@ -9,12 +9,14 @@ A Light Weight Code Editor For All Platforms Built With Electron and NodeJS
 * Requires NPM
 * Requires Bower
 * Requires Gulp
+* Requires webpack
+* Requires React
 
 After Clone
 
 * Type cd dirToRep
 * Type "npm install && bower install"
-* When Done Type "npm start" To Run Application
+* When Done Type "npm run debug" To Run Application
 
 # Npm and Bower Modules Used
 
@@ -25,6 +27,7 @@ Global
 * Electron
 * Bower
 * Gulp
+* Webpack
 
 Project-Only
 
@@ -36,6 +39,7 @@ Project-Only
 * electron-compile
 * electron-compilers
 * babel-cli
+* React
 
 Bower Components
 
