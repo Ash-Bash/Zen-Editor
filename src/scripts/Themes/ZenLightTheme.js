@@ -7,7 +7,9 @@ white, darkBlack, fullBlack,
 import Colors from 'material-ui/styles/colors';
 import {fade} from 'material-ui/utils/colorManipulator';
 
-const ZenLightTheme = {
+const editorSchema = ['#f7f7f7','#f1f1f1','#ffffff'];
+
+const theme = {
   spacing: {
     iconSize: 24,
     desktopGutter: 24,
@@ -23,11 +25,11 @@ const ZenLightTheme = {
   },
   fontFamily: 'Roboto, sans-serif',
   palette: {
-    primary1Color: '#9f9f9f',
+    primary1Color: editorSchema[0],
     primary2Color: cyan700,
     primary3Color: grey400,
     accent1Color: pinkA200,
-    accent2Color: '#f1f1f1',
+    accent2Color: editorSchema[1],
     accent3Color: grey500,
     textColor: darkBlack,
     alternateTextColor: '#222222',
@@ -38,3 +40,18 @@ const ZenLightTheme = {
     shadowColor: fullBlack
   },
 };
+
+export default class ZenLightTheme {
+
+  constructor() {
+
+  }
+
+  getEditorColorSchema() {
+    return editorSchema;
+  }
+
+  getMaterialTheme() {
+    return theme;
+  }
+}
