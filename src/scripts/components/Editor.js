@@ -1,24 +1,23 @@
 import React from 'react';
-
+import ThemeManager from '../Classes/ThemeManager.js';
+import ThemeType from '../Classes/Theme.js';
 import SidePane from './SidePane.js';
 import Content from './Content.js';
+
+const themeManager = new ThemeManager(ThemeType);
 
 export default class Editor extends React.Component {
 
   render(){
 
-    const darkThemeColor = ['#222222','#292929'];
-
-    const lightThemeColor = ['#f1f1f1','#ffffff'];
-
-    const themeColor = darkThemeColor;
+    const themeColor = themeManager.getEditorColorSchema();
 
     const sidePaneThemeStyle = {
-      'background-color': themeColor[0]
+      'background-color': themeColor[1]
     };
 
     const contentThemeStyle = {
-      'background-color': themeColor[1]
+      'background-color': themeColor[2]
     };
     return (
       <div className="EditorComponent">

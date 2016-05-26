@@ -1,16 +1,14 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import ThemeManager from './Classes/ThemeManager.js';
-import ZenDarkTheme from './Themes/ZenDarkTheme.js';
-import ZenLightTheme from './Themes/ZenLightTheme.js';
+import ThemeType from './Classes/Theme.js';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import Layout from './components/Layout.js';
 
-const themeManager = new ThemeManager("dark");
+const themeManager = new ThemeManager(ThemeType);
 
-const theme = getMuiTheme(themeManager.getMaterialTheme());
+const theme = themeManager.getMaterialTheme();
 
 export default class App extends React.Component {
 

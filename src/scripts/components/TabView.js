@@ -1,5 +1,6 @@
 import React from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
+import TabContent from './TabContent.js';
 
 //SVG-Icons Imports
 

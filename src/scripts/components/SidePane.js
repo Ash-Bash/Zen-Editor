@@ -33,9 +33,9 @@ export default class SidePane extends React.Component {
         <div>
           <List>
             <Subheader className="TableSubheader">Directory</Subheader>
-            <ListItem primaryText="src" leftIcon={<FolderIcon />} primaryTogglesNestedList={true} nestedItems={[
+            <ListItem primaryText="src" leftIcon={<FolderIcon />} initiallyOpen={true} primaryTogglesNestedList={true} nestedItems={[
               <ListItem primaryText="index.html" leftIcon={<FileIcon />} />,
-              <ListItem primaryText="JS" leftIcon={<FolderIcon />} nestedItems={[
+              <ListItem primaryText="JS" leftIcon={<FolderIcon />} initiallyOpen={true} primaryTogglesNestedList={true} nestedItems={[
                   <ListItem primaryText="hello.js" leftIcon={<FileIcon />} />,
                 ]}/>,
               ]}
