@@ -19,7 +19,7 @@ export default class SidePane extends React.Component {
   render(){
     return (
       <div>
-        <Toolbar color="#087cff">
+        <Toolbar className="ToolbarComponent">
           <ToolbarGroup>
             <ToolbarTitle text="Dir Name"/>
           </ToolbarGroup>
@@ -32,7 +32,7 @@ export default class SidePane extends React.Component {
         </Toolbar>
         <div>
           <List>
-            <Subheader>Directory</Subheader>
+            <Subheader className="TableSubheader">Directory</Subheader>
             <ListItem primaryText="src" leftIcon={<FolderIcon />} primaryTogglesNestedList={true} nestedItems={[
               <ListItem primaryText="index.html" leftIcon={<FileIcon />} />,
               <ListItem primaryText="JS" leftIcon={<FolderIcon />} nestedItems={[

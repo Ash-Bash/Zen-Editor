@@ -1,4 +1,4 @@
-md-tabs, h1, span, img {
+md-tabs, h1, span, img, .TableSubheader {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select:none;
@@ -161,6 +161,14 @@ div.Content {
     min-width: 200px;
     max-width: 100%;
     /*background-color: #292929;*/
+}
+
+.ToolbarComponent {
+    /*height: 48px !important;*/
+}
+
+.TabViewComponent {
+    height: 56px !important;
 }
 
 .listtem-img path {

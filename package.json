@@ -6,8 +6,12 @@
   "scripts": {
     "start": "electron .",
     "debug": "webpack && npm start",
+    "build": "webpack",
     "dev-watch": "webpack -w",
-    "build": "electron-packager . Zen-Editor --platform=win32 --arch=x64"
+    "deploy-all": "",
+    "deploy-win": "electron-packager . Zen-Editor --platform=win32 --arch=x64",
+    "deploy-linux": "",
+    "deploy-osx": ""
   },
   "keywords": [
     "zen",
