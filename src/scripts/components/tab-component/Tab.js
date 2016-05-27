@@ -3,7 +3,7 @@ import TabStyle from '../../../styles/components/tab-component/Tab.js';
 import IconButton from 'material-ui/IconButton';
 
 //SVG-Icons Imports
-import CloseIcon from 'material-ui/svg-icons/navigation/cancel';
+import CloseIcon from 'material-ui/svg-icons/navigation/close';
 
 const tabStyle = new TabStyle();
 
@@ -21,7 +21,7 @@ export default class Tab extends React.Component {
 
   render(){
     return (
-      <div>
+      <div style={tabStyle.Tab()}>
         <span style={tabStyle.TabTitle()}>{tabTitle}</span>
         <IconButton tooltip="Close" style={tabStyle.TabCloseBtn()}>
           <CloseIcon />

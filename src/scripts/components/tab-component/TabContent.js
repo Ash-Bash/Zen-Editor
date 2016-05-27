@@ -3,9 +3,25 @@ import TabContentStyle from '../../../styles/components/tab-component/TabContent
 
 //SVG-Icons Imports
 
+var id = 0;
+var viewType = '';
+var dir = '';
+
 export default class TabContent extends React.Component {
 
-  getViewType(viewType) {
+  getId(){
+
+  }
+
+  getViewType() {
+
+  }
+
+  getDir() {
+    
+  }
+
+  setViewType() {
 
   }
 
