@@ -1,6 +1,7 @@
 import React from 'react';
 
-import TabView from './TabView.js';
+import TabView from './tab-component/TabView.js';
+import Tab from './tab-component/Tab.js';
 
 
 //SVG-Icons Imports
@@ -11,6 +12,7 @@ export default class Content extends React.Component {
     return (
       <div>
         <TabView />
+        <Tab/>
       </div>
     );
   }

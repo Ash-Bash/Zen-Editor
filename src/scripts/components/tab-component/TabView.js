@@ -1,4 +1,5 @@
 import React from 'react';
+import TabViewStyle from '../../../styles/components/tab-component/TabView.js';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import TabContent from './TabContent.js';
 
