@@ -8,18 +8,21 @@ const themeColor = themeManager.getEditorColorSchema();
 const container = {
   display: 'inline-block',
   'background-color': themeColor[0],
-  width: '100%'
+  width: '100%',
+  'text-align': 'center'
 }
 
 const bar = {
   display: 'inline-block',
-  width: '85%',
+  width: '88%',
   height: '56px',
   'min-height': '52px',
   'max-height': '52px',
   'text-align': 'center',
   'overflow-x': 'hidden',
-  'overflow-y': 'hidden'
+  'overflow-y': 'hidden',
+  'white-space': 'nowrap',
+  margin: 'auto'
 }
 
 const leftBtn = {
