@@ -12,7 +12,6 @@ export default class Content extends React.Component {
     return (
       <div>
         <TabView />
-        <Tab/>
       </div>
     );
   }

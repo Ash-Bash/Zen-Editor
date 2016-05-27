@@ -15,11 +15,10 @@ const bar = {
   display: 'inline-block',
   width: '85%',
   height: '56px',
-  'min-height': '56px',
-  'max-height': '56px',
+  'min-height': '52px',
+  'max-height': '52px',
   'text-align': 'center',
-  overflow: 'hidden',
-  'overflow-x': 'scrol',
+  'overflow-x': 'hidden',
   'overflow-y': 'hidden'
 }
 
