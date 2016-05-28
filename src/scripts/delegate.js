@@ -2,6 +2,10 @@
 
 let win;
 
+function LoadWindow(window) {
+  win = window;
+}
+
 function applicationWillFinnishLoading(){
     console.log('Application Will Finnish Loading');
 }

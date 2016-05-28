@@ -1,4 +1,4 @@
 
-const themeType = "light";
+const themeType = "dark";
 
 export default themeType;

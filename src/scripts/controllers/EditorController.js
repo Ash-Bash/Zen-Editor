@@ -5,7 +5,7 @@
       .module('Zen-Editor', ['ngRoute', 'ngMaterial', 'ngAnimate'])
       .controller('EditorController', EditorController);
   function EditorController ($scope, $log) {
-      
+
    this.topDirections = ['left', 'up'];
    this.bottomDirections = ['down', 'right'];
    this.isOpen = false;
@@ -13,7 +13,7 @@
    this.selectedMode = 'md-scale';
    this.availableDirections = ['up', 'down', 'left', 'right'];
    this.selectedDirection = 'down';
-    
+
     var tabs = [
           { title: 'Start-Up Frame', content: '', view_type: "menu", view: "./frames/start_menu.html"},
           { title: 'Code Editor Frame', content: '', view_type: "editor", view: "./frames/code_editor.html"},
@@ -40,41 +40,41 @@
       var index = tabs.indexOf(tab);
       tabs.splice(index, 1);
     };
-    
+
     $scope.$on('removeTab', function(event, tab) {
         var index = tabs.indexOf(tab);
         tabs.splice(index, 1);
     });
-    
-    $scope.hideEditorControls = function(view_type) {       
+
+    $scope.hideEditorControls = function(view_type) {
       if (view_type == "editor"){
         return false;
       }
       else{
         return true;
-      }            
+      }
     }
-    
-    $scope.hideInfomationControls = function(view_type) {       
+
+    $scope.hideInfomationControls = function(view_type) {
       if (view_type == "viewer" || view_type == "editor"){
         return false;
       }
       else{
         return true;
-      }            
+      }
     }
-    
+
     $scope.trustSrc = function(src) {
         return $sce.trustAsResourceUrl(src);
     }
-    
+
     $scope.scriptMode = "javascript";
-    
+
     var directory = ""
     var dirData = [
       { name: 'Test Folder', dir: 'C://TestProject/Test Folder', type: 'folder', format: 'none'},
       { name: 'Test_File.txt', dir: 'C://TestProject/Test_File', type: 'file', format: 'txt'}
     ];
-    
+
   }
 })();

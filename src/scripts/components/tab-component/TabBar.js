@@ -11,19 +11,30 @@ const tabBarStyle = new TabBarStyle();
 
 var tabs = [<Tab>Hello</Tab>, <Tab>Hello</Tab>, <Tab>Hello</Tab>, <Tab>Hello</Tab>, <Tab>Hello</Tab>, <Tab>Hello</Tab>, <Tab>Hello</Tab>];
 
+var IsLeftButtonDisabled = true;
+var IsRightButtonDisabled = false;
+
 export default class TabBar extends React.Component {
+
+  MoveLeft() {
+    console.log('Left Button');
+  }
+
+  MoveRight() {
+    console.log('Right Button');
+  }
 
   render() {
     return(
       <div>
         <div style={tabBarStyle.Container()}>
-          <IconButton tooltip="Left" style={tabBarStyle.LeftBtn()}>
+          <IconButton tooltip="Left" style={tabBarStyle.LeftBtn()} disabled={IsLeftButtonDisabled} onClick={this.MoveLeft()}>
             <LeftArrowIcon />
           </IconButton>
           <div style={tabBarStyle.Bar()}>
             {tabs}
           </div>
-          <IconButton tooltip="Right" style={tabBarStyle.RightBtn()}>
+          <IconButton tooltip="Right" style={tabBarStyle.RightBtn()} disabled={IsRightButtonDisabled} onClick={this.MoveRight()}>
             <RightArrowIcon />
           </IconButton>
         </div>

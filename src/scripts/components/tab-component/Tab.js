@@ -9,6 +9,8 @@ const tabStyle = new TabStyle();
 
 var tabTitle = "Untitled";
 
+var IsCloseButtonDisabled = false;
+
 export default class Tab extends React.Component {
 
   setTabTitle(title) {
@@ -19,11 +21,19 @@ export default class Tab extends React.Component {
     return tabTitle;
   }
 
+  CloseBtnOnMouseEnter() {
+    IsCloseButtonDisabled = false;
+  }
+
+  CloseBtnOnMouseLeave() {
+    IsCloseButtonDisabled = true;
+  }
+
   render(){
     return (
       <div style={tabStyle.Tab()}>
         <span style={tabStyle.TabTitle()}>{tabTitle}</span>
-        <IconButton tooltip="Close" style={tabStyle.TabCloseBtn()}>
+        <IconButton tooltip="Close" style={tabStyle.TabCloseBtn()} disabled={IsCloseButtonDisabled} onMouseEnter={this.CloseBtnOnMouseEnter()} onMouseLeave={this.CloseBtnOnMouseLeave()}>
           <CloseIcon />
         </IconButton>
       </div>

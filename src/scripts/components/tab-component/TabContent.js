@@ -18,7 +18,7 @@ export default class TabContent extends React.Component {
   }
 
   getDir() {
-    
+
   }
 
   setViewType() {
