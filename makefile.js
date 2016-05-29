@@ -5,10 +5,22 @@ export function build() {
   // run typescript compiler
   this.run('typings');
   exec('"node_modules/.bin/tsc"')
+
+  //run Webpack compiler
+  //exec('webpack');
+}
+
+export function debug() {
+  //Builds and Compiles typescript scripts
+  this.run('build');
+
+  //Runs Electron Application
+  exec('electron .');
 }
 
 export function clean() {
- exec('rm -fr node_modules');
+  exec('rm -fr node_modules');
+  exec('rm -fr typings');
 }
 
 export function deployall() {

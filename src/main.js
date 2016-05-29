@@ -1,5 +1,5 @@
-/// <reference path="../typings/github-electron/github-electron.d.ts" />
-/// <reference path="../typings/node/node.d.ts" />
+/// <reference path="../typings/tsd.d.ts" />
+"use strict";
 const electron = require('electron');
 // Module to control application life.
 const app = electron.app;
@@ -12,7 +12,7 @@ function createWindow() {
     // Create the browser window.
     mainWindow = new BrowserWindow({ width: 800, height: 600 });
     // and load the index.html of the app.
-    mainWindow.loadURL(`file://${__dirname}/shell.html`);
+    mainWindow.loadURL('file://' + __dirname + '/layouts/shell.html');
     // Open the DevTools.
     mainWindow.webContents.openDevTools();
     // Emitted when the window is closed.

@@ -7,3 +7,4 @@ cache
 *.make
 
 !makefile.js
+!webpack.config.js
