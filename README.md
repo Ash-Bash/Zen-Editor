@@ -28,6 +28,8 @@ Global
 * Bower
 * Gulp
 * Webpack
+* Node-Make
+* ShellJS
 
 Project-Only
 
