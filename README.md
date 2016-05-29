@@ -8,9 +8,9 @@ A Light Weight Code Editor For All Platforms Built With Electron and NodeJS
 * Requires Electron >1.1
 * Requires NPM
 * Requires Bower
-* Requires Gulp
 * Requires webpack
 * Requires React
+* Requires Node-Make (The Ability to Write and Run Makefiles in JavaScript)
 
 After Clone
 
@@ -26,7 +26,6 @@ Global
 
 * Electron
 * Bower
-* Gulp
 * Webpack
 * Node-Make
 * ShellJS
@@ -36,7 +35,6 @@ Project-Only
 * editor-framework
 * asar
 * fs-jetpack
-* gulp-electron
 * remote
 * electron-compile
 * electron-compilers
