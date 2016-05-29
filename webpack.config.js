@@ -1,6 +1,38 @@
 var debug = process.env.NODE_ENV !== "production";
 var webpack = require('webpack');
 
+/*module.exports = {
+  entry: "./src/main.ts",
+  output: {
+    path: __dirname + "/src",
+    filename: "main.js"
+  },
+  resolve: {
+    extensions: ['', '.webpack.js', '.web.js', '.jsx', '.js', '.ts']
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.ts$/,
+        loader: 'ts-loader'
+      }
+    ]
+  },
+  externals: [
+      (function() {
+          var IGNORES = [
+              'electron'
+          ];
+          return function(context, request, callback) {
+              if (IGNORES.indexOf(request) >= 0) {
+                  return callback(null, "require('" + request + "')");
+              }
+              return callback();
+          }
+      })()
+  ]
+};*/
+
 module.exports = {
   context: __dirname + "/src",
   devtool: debug ? "inline-sourcemap" : null,

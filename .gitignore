@@ -4,7 +4,8 @@ dist
 cache
 
 *.js
-*.make
+*.map
 
 !makefile.js
 !webpack.config.js
+!gulpfile.js

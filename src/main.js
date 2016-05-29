@@ -7,20 +7,25 @@ const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let mainWindow;
+let window;
+//Application Informtion
+let app_title = "Zen Code Editor";
+let app_version = app.getVersion();
 function createWindow() {
     // Create the browser window.
-    mainWindow = new BrowserWindow({ width: 800, height: 600 });
+    window = new BrowserWindow({ width: 800, height: 600 });
     // and load the index.html of the app.
-    mainWindow.loadURL('file://' + __dirname + '/layouts/shell.html');
+    window.loadURL('file://' + __dirname + '/layouts/shell.html');
+    //Set Title of Window.
+    window.setTitle(app_title);
     // Open the DevTools.
-    mainWindow.webContents.openDevTools();
+    //mainWindow.webContents.openDevTools();
     // Emitted when the window is closed.
-    mainWindow.on('closed', function () {
+    window.on('closed', function () {
         // Dereference the window object, usually you would store windows
         // in an array if your app supports multi windows, this is the time
         // when you should delete the corresponding element.
-        mainWindow = null;
+        window = null;
     });
 }
 // This method will be called when Electron has finished
@@ -38,7 +43,7 @@ app.on('window-all-closed', function () {
 app.on('activate', function () {
     // On OS X it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
-    if (mainWindow === null) {
+    if (window === null) {
         createWindow();
     }
 });
