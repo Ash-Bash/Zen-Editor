@@ -1,7 +1,7 @@
 {
     "version": "0.2.0",
     "configurations": [
-        { 
+        {
             "name": "Launch Zen-Editor App",
             "type": "node",
             "program": "${workspaceRoot}/src/main.js", // important
@@ -11,10 +11,10 @@
             "request": "launch",
             // next line is very important
             "runtimeExecutable": "${workspaceRoot}/node_modules/electron-prebuilt/dist/electron.exe",
-            "env": { }, 
+            "env": { },
             "sourceMaps": false
         },
-        { 
+        {
             "name": "Launch Zen-Editor App For ES6",
             "type": "node",
             "program": "${workspaceRoot}/src/main.js", // important
@@ -24,7 +24,7 @@
             "request": "launch",
             // next line is very important
             "runtimeExecutable": "${workspaceRoot}/node_modules/electron-prebuilt-compile/node_modules/electron-prebuilt/dist/electron.exe",
-            "env": { }, 
+            "env": { },
             "sourceMaps": false
         }
     ]

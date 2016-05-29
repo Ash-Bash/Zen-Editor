@@ -1,129 +1,45 @@
-//const electron = require('electron');
-const electron = require('electron');
-const delegate = require('./scripts/delegate.js');
-const menu = require('./scripts/menu.js');
-const path = require('path');
-//import renderer from './scripts/renderer.js';
-
-const ipc = electron.icpMain;
-
-const dialog = electron.dialog;
-const {app} = electron;
-const {BrowserWindow} = electron;
-
-const Menu = electron.Menu;
-const MenuItem = electron;
-
-//var path = require('path');
-global.appRoot = path.resolve(__dirname);
-
-//const delegate = require('./scripts/delegate.js');
-//var menu = require('./scripts/menu.js');
-
-let app_title = "Zen Code Editor";
-let app_version = app.getVersion();
-let window;
-
+const electron = module('electron');
+// Module to control application life.
+const app = electron.app;
+// Module to create native browser window.
+const BrowserWindow = electron.BrowserWindow;
+// Keep a global reference of the window object, if you don't, the window will
+// be closed automatically when the JavaScript object is garbage collected.
+let mainWindow;
 function createWindow() {
-
-    //Create The Browser Window
-    window = new BrowserWindow({ width: 1024, height: 768});
-    window.setMinimumSize(1024, 768);
-
-    //Set Title of Window.
-    window.setTitle(app_title);
-
-    //Emitted When The Window Is Closed.
-    window.on('responsive', () => {
-        delegate.windowIsResponsive();
+    // Create the browser window.
+    mainWindow = new BrowserWindow({ width: 800, height: 600 });
+    // and load the index.html of the app.
+    mainWindow.loadURL(`file://${__dirname}/index.html`);
+    // Open the DevTools.
+    mainWindow.webContents.openDevTools();
+    // Emitted when the window is closed.
+    mainWindow.on('closed', function () {
+        // Dereference the window object, usually you would store windows
+        // in an array if your app supports multi windows, this is the time
+        // when you should delete the corresponding element.
+        mainWindow = null;
     });
-
-    window.on('unresponsive', () => {
-        delegate.windowIsNotResponsive();
-    });
-
-    window.on('restore', () => {
-        delegate.windowDidResume();
-    });
-
-    window.on('hide', () => {
-        delegate.windowDidPause();
-    });
-
-    window.on('maximize', () => {
-        delegate.windowDidMaximize();
-    });
-
-    window.on('unmaximize', () => {
-        delegate.windowDidUnmaxinmized();
-    });
-
-    window.on('closed', () => {
-        delegate.windowDidClose();
-        window = null;
-    });
-
-   //var menuItems = Menu.buildFromTemplate(menu.menuItemsData);
-   Menu.setApplicationMenu(Menu.buildFromTemplate(menu.menuItemsData));
-
-    delegate.applicationDidFinnishLoading(window);
 }
-
-app.setName(app_title);
-
-app.on('will-finish-launching', () => {
-    console.log('-----------------------------------');
-    console.log('App Name: ' + app_title);
-    console.log('App Version: ' + app_version);
-    console.log('Developed By: Ashley James Chapman');
-    console.log('-----------------------------------');
-    console.log(' ');
-
-    delegate.applicationWillFinnishLoading();
-});
-
+// This method will be called when Electron has finished
+// initialization and is ready to create browser windows.
+// Some APIs can only be used after this event occurs.
 app.on('ready', createWindow);
-
-//Quit When All Windows Are Closed
-app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin'){
+// Quit when all windows are closed.
+app.on('window-all-closed', function () {
+    // On OS X it is common for applications and their menu bar
+    // to stay active until the user quits explicitly with Cmd + Q
+    if (process.platform !== 'darwin') {
         app.quit();
     }
 });
-
-app.on('before-quit', () => {
-    delegate.applicationWillClose();
-});
-
-app.on('will-quit', () => {
-    delegate.applicationDidClose();
-});
-
-app.on('activate', () => {
-
-    delegate.applicationDidResume();
-
-    //Dock Icon Is Clicked And There Are No Other Windows Open.
-    if (window == null){
+app.on('activate', function () {
+    // On OS X it's common to re-create a window in the app when the
+    // dock icon is clicked and there are no other windows open.
+    if (mainWindow === null) {
         createWindow();
     }
 });
-
-/*ipc.on('open-file-dialog', function (event) {
-  dialog.showOpenDialog({
-    properties: ['openFile', 'openDirectory']
-  }, function (files) {
-    if (files) event.sender.send('OpenExistingDirButton', files)
-  })
-})
-
-function selectDirectory() {
-  dialog.showOpenDialog(mainWindow, {
-    properties: ['openDirectory']
-  })
-}
-
-exports.selectDirectory = function () {
-  // dialog.showOpenDialog as before
-
-}*/
+// In this file you can include the rest of your app's specific main process
+// code. You can also put them in separate files and require them here.
+//# sourceMappingURL=main.js.map
