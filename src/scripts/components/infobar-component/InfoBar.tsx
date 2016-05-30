@@ -3,6 +3,9 @@
 import React = require('react');
 import ReactDom = require('react-dom');
 
+import SidePaneTray = require('./tray-components/SidePaneTray');
+import ContentViewTray = require('./tray-components/ContentViewTray');
+
 import Theme = require('../../classes/Theme');
 import ThemeManager = require('../../classes/ThemeManager');
 
@@ -29,8 +32,12 @@ export = class InfoBar extends React.Component<ComponentProps, ComponentState> {
     render() {
       return (
         <div className="InfoBarComponent" style={InfoBarStyle}>
-            <div className="SidePaneSection" style={SidePaneSectionStyle}></div>
-            <div className="ContentSection"></div>
+            <div className="SidePaneSection" style={SidePaneSectionStyle}>
+              <SidePaneTray />
+            </div>
+            <div className="ContentSection">
+              <ContentViewTray />
+            </div>
         </div>
       );
     }

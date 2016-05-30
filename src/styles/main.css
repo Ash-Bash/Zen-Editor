@@ -66,6 +66,52 @@ md-tabs, h1, span, img, .TableSubheader {
   height: 100%;
 }
 
+.SidePaneTrayComponent {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.ContentViewTrayComponent {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.TrayButtonComponent {
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0);
+  border-width: 0px;
+  padding: 0;
+}
+
+.TrayButtonComponent:hover {
+  color: #ffffff;
+  border-width: 0px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.TrayButtonComponent:active {
+  color: #ffffff;
+  border-width: 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.TrayButtonComponent:focus {
+  outline: none;
+}
+
+.TrayButtonIconComponent {
+  padding-top: 2px;
+}
+
+#svgPath {
+  fill: #ffffff !important;
+}
+
 .SidePane, .ContentView {
 
     float: left;
