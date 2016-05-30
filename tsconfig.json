@@ -11,7 +11,15 @@
     ],
     "files": [
         "src/main.ts",
+        "src/scripts/classes/Theme.ts",
+        "src/scripts/classes/ThemeManager.ts",
+        "src/scripts/themes/ZenDarkTheme.ts",
+        "src/scripts/themes/ZenLightTheme.ts",
         "src/scripts/app.tsx",
+        "src/scripts/components/editor-component/ContentView.tsx",
+        "src/scripts/components/editor-component/Editor.tsx",
+        "src/scripts/components/editor-component/SidePane.tsx",
+        "src/scripts/components/infobar-component/InfoBar.tsx",
         "src/scripts/components/Layout.tsx"
     ],
     "atom": {

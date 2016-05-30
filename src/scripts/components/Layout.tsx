@@ -3,6 +3,9 @@
 import React = require('react');
 import ReactDom = require('react-dom');
 
+import Editor = require('./editor-component/Editor');
+import InfoBar = require('./infobar-component/InfoBar');
+
 interface ComponentProps {
 
 }
@@ -11,11 +14,12 @@ interface ComponentState {
 
 }
 
-export = class MainWindow extends React.Component<ComponentProps, ComponentState> {
+export = class Layout extends React.Component<ComponentProps, ComponentState> {
     render() {
       return (
-        <div>
-            <h1>Hello World</h1>
+        <div className="LayoutComponent">
+            <Editor />
+            <InfoBar />
         </div>
       );
     }

@@ -16,7 +16,8 @@ let app_version = app.getVersion();
 
 function createWindow () {
     // Create the browser window.
-    window = new BrowserWindow({width: 800, height: 600})
+    window = new BrowserWindow({width: 1024, height: 768})
+    window.setMinimumSize(1024, 768);
 
     // and load the index.html of the app.
     window.loadURL('file://' + __dirname + '/layouts/shell.html');

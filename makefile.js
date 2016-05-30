@@ -1,6 +1,10 @@
 //Makefile.js Script
 require('shelljs/global');
 
+export function initialize() {
+  //Install the required npm packages (Including Global Ones)
+}
+
 export function compile() {
   //run Webpack compiler
   exec('"node_modules/.bin/webpack"');
@@ -70,7 +74,7 @@ export function deploylinux(){
   //Builds and Compiles typescript scripts and preps webpack
   this.run('build');
 
-  //Builds and Compiles A Binery 
+  //Builds and Compiles A Binery
   exec('"node_modules/.bin/electron-packager" . Zen-Editor --platform=linux --arch=all ./dist');
 }
 
