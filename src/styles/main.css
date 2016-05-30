@@ -104,6 +104,13 @@ md-tabs, h1, span, img, .TableSubheader {
   outline: none;
 }
 
+.SPTSettingsButton {
+  right: 0;
+  float: right;
+
+  margin-right: 0px !important;
+}
+
 .TrayButtonIconComponent {
   padding-top: 2px;
 }

@@ -7,6 +7,7 @@ import ReactDom = require('react-dom');
 import AddIcon = require('../../../../assets/img/icons/svgs/add_icon/Add');
 import NewFolderIcon = require('../../../../assets/img/icons/svgs/newfolder_icon/NewFolder');
 import RefreshIcon = require('../../../../assets/img/icons/svgs/refresh_icon/Refresh');
+import SettingsIcon = require('../../../../assets/img/icons/svgs/settings_icon/Settings');
 
 interface ComponentProps {
 
@@ -28,6 +29,10 @@ export = class SidePaneTray extends React.Component<ComponentProps, ComponentSta
           </button>
           <button className="TrayButtonComponent">
             <RefreshIcon />
+          </button>
+
+          <button className="TrayButtonComponent SPTSettingsButton">
+            <SettingsIcon />
           </button>
         </div>
       );
