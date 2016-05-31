@@ -19,6 +19,8 @@ const SidePaneStyle = {
   'background-color': editorSchema[1]
 }
 
+var dir_name = "";
+
 interface ComponentProps {
 
 }
@@ -33,18 +35,21 @@ export = class SidePane extends React.Component<ComponentProps, ComponentState> 
       ipc.send('open-file-dialog');
     }
 
+    LoadDirectory(dir) {
+      console.log(dir);
+      dir_name = dir;
+    }
+
     render() {
       return (
         <div className="SidePane" style={SidePaneStyle}>
           <button id="select-directory" className="OAEDButton" onClick={this.SelectDirectory}>Open An Existing Directory</button>
+          <h6>{dir_name}</h6>
         </div>
       );
     }
 }
 
-const selectDirBtn = document.getElementById('select-directory')
-
-
 ipc.on('selected-directory', function (event, path) {
-  document.getElementById('selected-directory').innerHTML = `You selected: ${path}`
+    dir_name = path;
 })
