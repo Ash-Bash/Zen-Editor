@@ -1,4 +1,4 @@
-md-tabs, h1, span, img, .TableSubheader {
+md-tabs, h1, span, img, .TableSubheader, button {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select:none;
@@ -76,6 +76,40 @@ md-tabs, h1, span, img, .TableSubheader {
   display: inline-block;
   width: 100%;
   height: 100%;
+}
+
+.OAEDButton {
+  position: relative;
+  color: #ffffff;
+  border-width: 0px;
+  width: 90%;
+  min-width: 180px;
+  height: 32px;
+  background-color: rgb(0, 168, 82);
+  margin-top: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.OAEDButton:hover {
+  color: #ffffff;
+  border-width: 0px;
+  background-color: rgb(4, 129, 65);
+}
+
+.OAEDButton:active {
+  color: #ffffff;
+  border-width: 0px;
+  background-color: rgb(2, 89, 45);
+}
+
+.OAEDButton:focus {
+  outline: none;
 }
 
 .TrayButtonComponent {

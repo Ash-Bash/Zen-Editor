@@ -28,7 +28,7 @@
         "src/assets/img/icons/svgs/refresh_icon/Refresh.tsx",
         "src/assets/img/icons/svgs/save_icon/Save.tsx",
         "src/assets/img/icons/svgs/search_icon/Search.tsx",
-        "src/assets/img/icons/svgs/settings-icon/Settings.tsx",
+        "src/assets/img/icons/svgs/settings_icon/Settings.tsx",
         "src/assets/img/icons/svgs/undo_icon/Undo.tsx",
         "src/scripts/app.tsx",
         "src/scripts/components/editor-component/ContentView.tsx",

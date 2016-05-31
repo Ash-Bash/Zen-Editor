@@ -6,6 +6,9 @@ const app = electron.app;
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow;
 
+const ipc = require('electron').ipcMain
+const dialog = require('electron').dialog
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let window;
@@ -61,3 +64,10 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+ipc.on('open-file-dialog', function (event) {
+  dialog.showOpenDialog({
+    properties: ['openFile', 'openDirectory']
+  }, function (files) {
+    if (files) event.sender.send('selected-directory', files)
+  })
+})
