@@ -1,4 +1,7 @@
 /// <reference path="../../../../typings/tsd.d.ts" />
+/// <reference path="../../classes/interfaces.d.ts"/>
+
+declare var electron: any;
 
 import React = require('react');
 import ReactDom = require('react-dom');
@@ -9,7 +12,7 @@ import ContentViewTray = require('./tray-components/ContentViewTray');
 import Theme = require('../../classes/Theme');
 import ThemeManager = require('../../classes/ThemeManager');
 
-const themeManager = new ThemeManager(Theme);
+const themeManager = new ThemeManager(Theme.themeType);
 const infobarSchema = themeManager.getInfoBarColorSchema();
 
 const SidePaneSectionStyle = {
@@ -20,15 +23,7 @@ const InfoBarStyle = {
   'background-color': infobarSchema[0]
 }
 
-interface ComponentProps {
-
-}
-
-interface ComponentState {
-
-}
-
-export = class InfoBar extends React.Component<ComponentProps, ComponentState> {
+export = class InfoBar extends React.Component<IInfoBarProps, IInfoBarState> {
     render() {
       return (
         <div className="InfoBarComponent" style={InfoBarStyle}>

@@ -1,4 +1,7 @@
 /// <reference path="../../../../../typings/tsd.d.ts" />
+/// <reference path="../../../classes/interfaces.d.ts"/>
+
+declare var electron: any;
 
 import React = require('react');
 import ReactDom = require('react-dom');
@@ -9,15 +12,7 @@ import NewFolderIcon = require('../../../../assets/img/icons/svgs/newfolder_icon
 import RefreshIcon = require('../../../../assets/img/icons/svgs/refresh_icon/Refresh');
 import SettingsIcon = require('../../../../assets/img/icons/svgs/settings_icon/Settings');
 
-interface ComponentProps {
-
-}
-
-interface ComponentState {
-
-}
-
-export = class SidePaneTray extends React.Component<ComponentProps, ComponentState> {
+export = class SidePaneTray extends React.Component<ISidePaneTrayProps, ISidePaneTrayState> {
     render() {
       return (
         <div className="SidePaneTrayComponent">

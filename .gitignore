@@ -9,3 +9,5 @@ cache
 !makefile.js
 !webpack.config.js
 !gulpfile.js
+
+!actions.js

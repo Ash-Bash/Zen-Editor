@@ -1,14 +1,16 @@
 /// <reference path="../../../../typings/tsd.d.ts" />
+/// <reference path="../../classes/interfaces.d.ts"/>
 
 declare var electron: any;
 
 import React = require('react');
 import ReactDom = require('react-dom');
 
-import Theme = require('../../classes/Theme');
 import ThemeManager = require('../../classes/ThemeManager');
 
-const themeManager = new ThemeManager(Theme);
+import Theme = require('../../classes/Theme');
+
+const themeManager = new ThemeManager(Theme.themeType);
 
 const editorSchema = themeManager.getEditorColorSchema();
 
@@ -21,35 +23,48 @@ const SidePaneStyle = {
 
 var dir_name = "";
 
-interface ComponentProps {
+ipc.on('selected-directory', function (event, path) {
+  //store.dispatch({ type: 'OPEN_EXISTING_PROJECT_DIRECTORY', path});
+})
 
-}
+export = class SidePane extends React.Component<ISidePaneProps, ISidePaneState> {
 
-interface ComponentState {
+    constructor() {
+      super();
+      this.state = {
+        inputDir: 'Test Dir'
+      }
+    }
 
-}
+    handleChange(event) {
+      this.state = {
+        inputDir: dir_name
+      }
+    }
 
-export = class SidePane extends React.Component<ComponentProps, ComponentState> {
-
-    SelectDirectory() {
+    SelectDirectory = function () {
       ipc.send('open-file-dialog');
+
+      ipc.on('selected-directory', function (event, path) {
+        this.state = {
+          inputDir: path
+        }
+      })
     }
 
     LoadDirectory(dir) {
       console.log(dir);
-      dir_name = dir;
+      this.setState({
+        inputDir: dir
+      })
     }
 
     render() {
       return (
         <div className="SidePane" style={SidePaneStyle}>
           <button id="select-directory" className="OAEDButton" onClick={this.SelectDirectory}>Open An Existing Directory</button>
-          <h6>{dir_name}</h6>
+          <h5>{this.state.inputDir}</h5>
         </div>
       );
     }
 }
-
-ipc.on('selected-directory', function (event, path) {
-    dir_name = path;
-})

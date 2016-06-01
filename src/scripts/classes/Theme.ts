@@ -1,3 +1,2 @@
-const themeType = "dark";
-
-export = themeType;
+import constants = require('./constants');
+export var themeType = constants.themeType;
