@@ -11,3 +11,5 @@ cache
 !gulpfile.js
 
 !actions.js
+
+!EditorController.js

@@ -1,9 +1,107 @@
-md-tabs, h1, span, img, .TableSubheader, button {
+md-tabs, h1, h2, h3 h4, h5, h6, span, img, .TableSubheader, button {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select:none;
     user-select:none;
     -o-user-select:none;
+}
+
+#code {
+    width: 100%;
+    height:100%;
+    margin: 0px;
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    border-width: 0px;
+}
+
+#ViewFrame {
+    width: 100%;
+    height:100%;
+    margin: 0px;
+    position: fixed;
+    overflow:hidden;
+    top:0;
+    right:0;
+    bottom:0;
+    border-width: 0px;
+}
+
+#FileActionButton{
+    position:absolute;
+    top: 0;
+    right: 0;
+    Z-index: -999;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+#FabSpeedDial-View {
+    position:absolute;
+    top: 0;
+    right: 0;
+    Z-index: 999;
+}
+
+#img-viewer{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height:60%;
+    -ms-interpolation-mode: bicubic
+}
+
+#audio-viewer {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#video-viewer {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#StartUpTitleHeader {
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#OpenExistingDirButton {
+    position: absolute;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 25px;
+    bottom: 0;
+}
+
+#SettingsRow {
+    left: 0;
+    right: 0;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#SettingsSwitch {
+    float: right;
+    right: 0 !important;
+    margin-right: 25px;
 }
 
 .AppComponent {
@@ -64,6 +162,13 @@ md-tabs, h1, span, img, .TableSubheader, button {
 .ContentSection {
   width: 80%;
   height: 100%;
+  margin: 0px;
+  position: fixed;
+  overflow:hidden;
+  top:0;
+  right:0;
+  bottom:0;
+  border-width: 0px;
 }
 
 .SidePaneTrayComponent {
@@ -174,6 +279,25 @@ div.ContentView {
     /*background-color: #292929;*/
 }
 
+md-tab-content {
+    height: 100% !important;
+    margin: 0px !important;
+    position:absolute !important;
+    top:0 !important;
+    right:0 !important;
+    bottom:0 !important;
+    border-width: 0px !important;
+}
+
+md-tabs {
+    height: 100% !important;
+    margin: 0px !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    border-width: 0px !important;
+}
+
 .ToolbarComponent {
     /*height: 48px !important;*/
 }
@@ -190,4 +314,13 @@ div.ContentView {
     height: 100%;
     overflow-y: auto;
     overflow-x: auto;
+}
+
+.CodeMirror {
+    height: 100% !important;
+}
+
+md-toolbar {
+    height: 48px !important;
+    min-height: 48px !important;
 }

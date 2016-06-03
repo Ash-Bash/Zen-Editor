@@ -1,0 +1,7 @@
+.md-tab.md-active span {
+  color: white !important;
+}
+
+.md-tab span {
+  color: #999999 !important;
+}

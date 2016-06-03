@@ -1,0 +1,29 @@
+.DynamicTabs md-content {
+  background-color: transparent !important; }
+  .DynamicTabs md-content md-tabs {
+    border: 1px solid #e1e1e1; }
+    .DynamicTabs md-content md-tabs md-tab-content {
+      background: #f6f6f6; }
+    .DynamicTabs md-content md-tabs md-tabs-wrapper {
+      background: white; }
+  .DynamicTabs md-content h1:first-child {
+    margin-top: 0; }
+.DynamicTabs md-input-container {
+  padding-bottom: 0; }
+.DynamicTabs .remove-tab {
+  margin-bottom: 40px; }
+.DynamicTabs .demo-tab > div > div {
+  padding: 25px;
+  box-sizing: border-box; }
+.DynamicTabs .edit-form input {
+  width: 100%; }
+.DynamicTabs md-tabs {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+.DynamicTabs md-tab[disabled] {
+  opacity: 0.5; }
+.DynamicTabs label {
+  text-align: left; }
+.DynamicTabs .long > input {
+  width: 264px; }
+.DynamicTabs .md-button.add-tab {
+  transform: translateY(5px); }

@@ -23,7 +23,7 @@ function createWindow () {
     window.setMinimumSize(1024, 768);
 
     // and load the index.html of the app.
-    window.loadURL('file://' + __dirname + '/layouts/shell.html');
+    window.loadURL('file://' + __dirname + '/layouts/shell-expermental.html');
 
     //Set Title of Window.
     window.setTitle(app_title);
