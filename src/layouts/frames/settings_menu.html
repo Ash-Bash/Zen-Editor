@@ -21,13 +21,13 @@
           // Required Classes and dependencies
           var electron = require('electron');
           var fs = require('fs');
-          
+
           var themeManager = require("../scripts/classes/managers/ThemeManager.js");
           var fileManager = require("../scripts/classes/managers/FileManager.js");
         </script>
     </head>
      <body ng-app="Settings-Menu">
-        <div ng-controller="SettingsMenuController as SettingsMenu" style="width:100%" flex layout-fill>
+        <div ng-controller="SettingsMenuController as SettingsMenu" style="width:100%" flex layout-fill ng-style="BackgroundStyle">
             <div layout="column" role="main" class="md-whiteframe-z2" flex layout-fill>
                 <div id="SettingsRow" layout="row" layout-align="space-around center">
                     <h1 class="md-title">Dark Mode</h1>

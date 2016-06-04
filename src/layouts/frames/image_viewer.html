@@ -21,13 +21,13 @@
           // Required Classes and dependencies
           var electron = require('electron');
           var fs = require('fs');
-          
+
           var themeManager = require("../scripts/classes/managers/ThemeManager.js");
           var fileManager = require("../scripts/classes/managers/FileManager.js");
         </script>
     </head>
      <body ng-app="Image-Viewer">
-        <div ng-controller="ImageViewerController as ImageViewer" style="width:100%" flex layout-fill>
+        <div ng-controller="ImageViewerController as ImageViewer" style="width:100%" flex layout-fill ng-style="BackgroundStyle">
             <div flex layout="column" role="main" class="md-whiteframe-z2">
                 <img id="img-viewer" class="md-whiteframe-8dp" src="../../assets/img/wallpapers/space2.png"/>
             </div>

@@ -21,7 +21,7 @@
           // Required Classes and dependencies
           var electron = require('electron');
           var fs = require('fs');
-          
+
           var themeManager = require("../scripts/classes/managers/ThemeManager.js");
           var fileManager = require("../scripts/classes/managers/FileManager.js");
         </script>
@@ -31,7 +31,7 @@
         <script src="../../../bower_components/codemirror/lib/codemirror.js"></script>
     </head>
     <body ng-app="Code-Editor">
-      <div class="CodeEditor" ng-controller="CodeEditorController as CodeEditor">
+      <div class="CodeEditor" ng-controller="CodeEditorController as CodeEditor" ng-style="BackgroundStyle">
         <link rel="stylesheet" ng-href="{{MainStaticsStyleFile}}">
         <textarea id="code">if (var return) else {}</textarea>
         <script>

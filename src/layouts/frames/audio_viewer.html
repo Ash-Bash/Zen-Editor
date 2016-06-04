@@ -27,7 +27,7 @@
         </script>
     </head>
      <body ng-app="Audio-Viewer">
-        <div ng-controller="AudioViewerController as AudioViewer" style="width:100%" flex layout-fill>
+        <div ng-controller="AudioViewerController as AudioViewer" ng-style="BackgroundStyle" flex layout-fill>
             <div flex layout="column" role="main" class="md-whiteframe-z2">
                 <audio id="audio-viewer" class="md-whiteframe-8dp" controls preload>
                 </audio>

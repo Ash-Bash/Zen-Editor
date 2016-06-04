@@ -21,13 +21,13 @@
           // Required Classes and dependencies
           var electron = require('electron');
           var fs = require('fs');
-          
+
           var themeManager = require("../scripts/classes/managers/ThemeManager.js");
           var fileManager = require("../scripts/classes/managers/FileManager.js");
         </script>
     </head>
     <body ng-app="Start-Menu">
-        <div ng-controller="StartMenuController as StartMenu" style="width:100%" flex layout-fill>
+        <div ng-controller="StartMenuController as StartMenu" style="width:100%" flex layout-fill ng-style="BackgroundStyle">
             <div layout="column" role="main" class="md-whiteframe-z2" flex layout-fill>
                     <h1 id="StartUpTitleHeader" class="md-display-2">Welcome To Zen Code Editor</h1>
                     <md-button id="OpenExistingDirButton" class="md-raised md-primary">Open A Existing Directory</md-button>
