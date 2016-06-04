@@ -5,3 +5,16 @@
 .md-tab span {
   color: #999999 !important;
 }
+
+.CodeMirror-cursor {
+      border-left: 1px solid white !important;
+}
+
+.CodeMirror-gutters {
+  border-right: 0px solid #ddd;
+  background-color: #262626 !important;
+}
+
+.CodeMirror {
+  background: #181818 !important;
+}

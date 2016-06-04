@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- Angular Material style sheet -->
+        <link rel="stylesheet" href="../../../bower_components/angular-material/angular-material.min.css">
+
+        <!-- build:js scripts/vendor.js -->
+        <script src="../../../bower_components/angular/angular.js"></script>
+        <script src="../../../bower_components/angular-route/angular-route.js"></script>
+        <script src="../../../bower_components/angular-animate/angular-animate.js"></script>
+        <script src="../../../bower_components/angular-aria/angular-aria.js"></script>
+        <script src="../../../bower_components/angular-material/angular-material.js"></script>
+
+        <!--Controllers & Styles-->
+        <link rel="stylesheet" href="../../styles/main.css">
+        <script src="../../scripts/controllers/StartMenuController.js"></script>
+
+        <script>
+          // Required Classes and dependencies
+          var electron = require('electron');
+          var fs = require('fs');
+          
+          var themeManager = require("../scripts/classes/managers/ThemeManager.js");
+          var fileManager = require("../scripts/classes/managers/FileManager.js");
+        </script>
+    </head>
+    <body ng-app="Start-Menu">
+        <div ng-controller="StartMenuController as StartMenu" style="width:100%" flex layout-fill>
+            <div layout="column" role="main" class="md-whiteframe-z2" flex layout-fill>
+                    <h1 id="StartUpTitleHeader" class="md-display-2">Welcome To Zen Code Editor</h1>
+                    <md-button id="OpenExistingDirButton" class="md-raised md-primary">Open A Existing Directory</md-button>
+            </div>
+        </div>
+
+        <script>
+            // You can also require other files to run in this process
+            require('../../scripts/renderer.js')
+        </script>
+    </body>
+</html>

@@ -7,9 +7,27 @@
 
         var ipc = electron.ipcRenderer;
 
-        var editorSchema = ['#363636','#222222','#292929'];
-        var infobarSchema = ['rgb(0, 168, 82)','rgba(0, 0, 0, 0.3)'];
-        var textColorSchema = ['#f7f7f7','#f1f1f1','#ffffff'];
+        var themeListJSONData = {};
+        /*fileManager.readJSONFile("../styles/themes/theme_list.json", function(text) {
+          themeListJSONData = angular.toJson(text);
+          console.log(text);
+        });*/
+
+        var themeListJsonFile = fs.readFileSync('./src/styles/themes/theme_list.json');
+        var themeListData = JSON.parse(themeListJsonFile);
+        var themeList = themeListData.list;
+        console.log(JSON.parse(themeListJsonFile));
+        var themeJsonFile = fs.readFileSync(themeList[0].dir);
+        var themeJsonData = JSON.parse(themeJsonFile);
+        console.log(themeJsonData);
+        var themeData = themeJsonData.theme;
+
+
+        //var theme = themeManager.ThemeManager('');
+
+        var editorSchema = themeData[0].colors;
+        var infobarSchema = themeData[1].colors;
+        var textColorSchema = themeData[2].colors;
 
         this.topDirections = ['left', 'up'];
         this.bottomDirections = ['down', 'right'];
@@ -19,19 +37,19 @@
         this.availableDirections = ['up', 'down', 'left', 'right'];
         this.selectedDirection = 'down';
 
-        $scope.MainStaticsStyleFile = "../styles/themes/zen-dark-theme/Statics.css"
+        $scope.MainStaticsStyleFile = themeData[3].dir;
 
         $scope.SidePaneStyle = {
-            'background-color': editorSchema[1]
+            'background-color': editorSchema.base
         };
         $scope.ContentViewStyle = {
-            'background-color': editorSchema[2]
+            'background-color': editorSchema.primary
         };
         $scope.SidePaneSectionStyle = {
-            'background-color': infobarSchema[1]
+            'background-color': infobarSchema.sidepane
         };
         $scope.InfoBarStyle = {
-            'background-color': infobarSchema[0]
+            'background-color': infobarSchema.base
         };
 
         var tabs = [

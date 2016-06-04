@@ -129,22 +129,23 @@ md-tabs, h1, h2, h3 h4, h5, h6, span, img, .TableSubheader, button {
 }
 
 .EditorComponent {
+    display: inline-block;
+    position: absolute;
+    overflow:hidden;
+    vertical-align: top;
     width: 100%;
     height:100%;
     margin: 0px;
-    position: fixed;
-    overflow:hidden;
     top:0;
     right:0;
     bottom:0;
     border-width: 0px;
-    display: box;
-    box-flex: 1;
 }
 
 .InfoBarComponent {
   display: inline-block;
   position: fixed;
+  vertical-align: top;
   width: 100%;
   height: 32px;
   bottom: 0;
@@ -285,7 +286,6 @@ md-tab-content {
     position:absolute !important;
     top:0 !important;
     right:0 !important;
-    bottom:0 !important;
     border-width: 0px !important;
 }
 
@@ -294,7 +294,6 @@ md-tabs {
     margin: 0px !important;
     top: 0 !important;
     right: 0 !important;
-    bottom: 0 !important;
     border-width: 0px !important;
 }
 
@@ -304,6 +303,19 @@ md-tabs {
 
 .TabViewComponent {
     height: 56px !important;
+}
+
+.CodeEditor {
+  width: 100%;
+  height:100%;
+  margin: 0px;
+  position: fixed;
+  overflow:hidden;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  border-width: 0px;
 }
 
 .listtem-img path {

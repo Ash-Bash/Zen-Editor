@@ -6,8 +6,13 @@ const app = electron.app;
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow;
 
+const Menu = electron.Menu;
+const MenuItem = electron;
+
 const ipc = require('electron').ipcMain
 const dialog = require('electron').dialog
+
+const menu = require('./scripts/menu.js');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -33,11 +38,12 @@ function createWindow () {
 
     // Emitted when the window is closed.
     window.on('closed', function () {
-    // Dereference the window object, usually you would store windows
-    // in an array if your app supports multi windows, this is the time
-    // when you should delete the corresponding element.
-    window = null;
-  })
+      // Dereference the window object, usually you would store windows
+      // in an array if your app supports multi windows, this is the time
+      // when you should delete the corresponding element.
+      window = null;
+    })
+    Menu.setApplicationMenu(Menu.buildFromTemplate(menu.menuItemsData));
 }
 
 // This method will be called when Electron has finished

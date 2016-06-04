@@ -12,4 +12,15 @@ cache
 
 !actions.js
 
+!menu.js
+
 !EditorController.js
+!AudioViewerController.js
+!CodeEditorController.js
+!ImageViewerController.js
+!SettingsMenuController.js
+!StartMenuController.js
+!VideoViewerController.js
+
+!ThemeManager.js
+!FileManager.js

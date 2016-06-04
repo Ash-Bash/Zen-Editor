@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- Angular Material style sheet -->
+        <link rel="stylesheet" href="../../../bower_components/angular-material/angular-material.min.css">
+
+        <!-- build:js scripts/vendor.js -->
+        <script src="../../../bower_components/angular/angular.js"></script>
+        <script src="../../../bower_components/angular-route/angular-route.js"></script>
+        <script src="../../../bower_components/angular-animate/angular-animate.js"></script>
+        <script src="../../../bower_components/angular-aria/angular-aria.js"></script>
+        <script src="../../../bower_components/angular-material/angular-material.js"></script>
+
+        <!--Controllers & Styles-->
+        <link rel="stylesheet" href="../../styles/main.css">
+        <script src="../../scripts/controllers/SettingsMenuController.js"></script>
+
+        <script>
+          // Required Classes and dependencies
+          var electron = require('electron');
+          var fs = require('fs');
+          
+          var themeManager = require("../scripts/classes/managers/ThemeManager.js");
+          var fileManager = require("../scripts/classes/managers/FileManager.js");
+        </script>
+    </head>
+     <body ng-app="Settings-Menu">
+        <div ng-controller="SettingsMenuController as SettingsMenu" style="width:100%" flex layout-fill>
+            <div layout="column" role="main" class="md-whiteframe-z2" flex layout-fill>
+                <div id="SettingsRow" layout="row" layout-align="space-around center">
+                    <h1 class="md-title">Dark Mode</h1>
+                    <md-switch id="SettingsSwitch" class="md-primary">
+                    </md-switch>
+                </div>
+                <div id="SettingsRow" layout="row" layout-align="space-around center">
+                    <h1 class="md-title">Auto Save</h1>
+                    <md-switch id="SettingsSwitch" class="md-primary">
+                    </md-switch>
+                </div>
+                <div id="SettingsRow" layout="row" layout-align="space-around center">
+                    <h1 class="md-title">Test Item</h1>
+                    <md-switch id="SettingsSwitch" class="md-primary">
+                    </md-switch>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

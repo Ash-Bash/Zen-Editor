@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- Angular Material style sheet -->
+        <link rel="stylesheet" href="../../../bower_components/angular-material/angular-material.min.css">
+
+        <!-- build:js scripts/vendor.js -->
+        <script src="../../../bower_components/angular/angular.js"></script>
+        <script src="../../../bower_components/angular-route/angular-route.js"></script>
+        <script src="../../../bower_components/angular-animate/angular-animate.js"></script>
+        <script src="../../../bower_components/angular-aria/angular-aria.js"></script>
+        <script src="../../../bower_components/angular-material/angular-material.js"></script>
+
+        <!--Controllers & Styles-->
+        <link rel="stylesheet" href="../../styles/main.css">
+        <script src="../../scripts/controllers/CodeEditorController.js"></script>
+
+        <script>
+          // Required Classes and dependencies
+          var electron = require('electron');
+          var fs = require('fs');
+          
+          var themeManager = require("../scripts/classes/managers/ThemeManager.js");
+          var fileManager = require("../scripts/classes/managers/FileManager.js");
+        </script>
+
+        <!-- Create a simple CodeMirror instance -->
+        <link rel="stylesheet" href="../../../bower_components/codemirror/lib/codemirror.css">
+        <script src="../../../bower_components/codemirror/lib/codemirror.js"></script>
+    </head>
+    <body ng-app="Code-Editor">
+      <div class="CodeEditor" ng-controller="CodeEditorController as CodeEditor">
+        <link rel="stylesheet" ng-href="{{MainStaticsStyleFile}}">
+        <textarea id="code">if (var return) else {}</textarea>
+        <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                lineNumbers: true,
+                mode: "mixedhtml"
+            });
+        </script>
+      </div>
+    </body>
+</html>

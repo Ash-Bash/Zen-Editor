@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- Angular Material style sheet -->
+        <link rel="stylesheet" href="../../../bower_components/angular-material/angular-material.min.css">
+
+        <!-- build:js scripts/vendor.js -->
+        <script src="../../../bower_components/angular/angular.js"></script>
+        <script src="../../../bower_components/angular-route/angular-route.js"></script>
+        <script src="../../../bower_components/angular-animate/angular-animate.js"></script>
+        <script src="../../../bower_components/angular-aria/angular-aria.js"></script>
+        <script src="../../../bower_components/angular-material/angular-material.js"></script>
+
+        <!--Controllers & Styles-->
+        <link rel="stylesheet" href="../../styles/main.css">
+        <script src="../../scripts/controllers/VideoViewerController.js"></script>
+
+        <script>
+          // Required Classes and dependencies
+          var electron = require('electron');
+          var fs = require('fs');
+          
+          var themeManager = require("../scripts/classes/managers/ThemeManager.js");
+          var fileManager = require("../scripts/classes/managers/FileManager.js");
+        </script>
+    </head>
+     <body ng-app="Video-Viewer">
+        <div ng-controller="VideoViewerController as VideoViewer" style="width:100%" flex layout-fill>
+            <div flex layout="column" role="main" class="md-whiteframe-z2">
+                <video id="video-viewer" class="md-whiteframe-8dp" width="640" height="480" controls preload>
+                </video>
+            </div>
+        </div>
+    </body>
+</html>

@@ -66,6 +66,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "electron-packager": "^7.0.2",
     "electron-prebuilt": "^1.2.0",
+    "fs-jetpack": "^0.9.1",
     "node-make": "^1.1.1",
     "shelljs": "^0.7.0",
     "ts-loader": "^0.8.2",

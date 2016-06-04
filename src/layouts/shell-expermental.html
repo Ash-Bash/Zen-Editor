@@ -19,7 +19,12 @@
     <link rel="stylesheet" href="../styles/FABSpeedDial.css">
     <link rel="stylesheet" href="../styles/main.css">
     <script>
+      // Required Classes and dependencies
       var electron = require('electron');
+      var fs = require('fs');
+      
+      var themeManager = require("../scripts/classes/managers/ThemeManager.js");
+      var fileManager = require("../scripts/classes/managers/FileManager.js");
     </script>
 
     <!-- Create a simple CodeMirror instance -->
@@ -27,7 +32,7 @@
     <script src="../../bower_components/codemirror/lib/codemirror.js"></script>
   </head>
   <body ng-app="Zen-Editor">
-    <div id="application" ng-controller="EditorController as Editor" style="width:100%">
+    <div id="application" class="AppComponent" ng-controller="EditorController as Editor">
       <link rel="stylesheet" ng-href="{{MainStaticsStyleFile}}">
       <div class="LayoutComponent">
         <div class="EditorComponent">

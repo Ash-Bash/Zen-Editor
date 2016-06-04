@@ -1,0 +1,15 @@
+{
+  "name": "theme-list",
+  "list": [
+    {
+      "id": "zen-dark-theme",
+      "created-by": "Ashley Chapman",
+      "dir": "./src/styles/themes/zen-dark-theme/base.json"
+    },
+    {
+      "id": "zen-light-theme",
+      "created-by": "Ashley Chapman",
+      "dir": "./src/styles/themes/zen-light-theme/base.json"
+    }
+  ]
+}

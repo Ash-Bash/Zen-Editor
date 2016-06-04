@@ -1,0 +1,20 @@
+.md-tab.md-active span {
+  color: #181818 !important;
+}
+
+.md-tab span {
+  color: #424242 !important;
+}
+
+.CodeMirror-cursor {
+  border-left: 1px solid black !important;
+}
+
+.CodeMirror-gutters {
+  border-right: 0px solid #ddd;
+  background-color: #f7f7f7 !important;
+}
+
+.CodeMirror {
+  background: white !important;
+}

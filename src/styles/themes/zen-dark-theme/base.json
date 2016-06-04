@@ -1,0 +1,38 @@
+{
+  "id": "zen-dark-theme",
+  "name": "Zen Dark Theme",
+  "description": "UNKNOWN",
+  "version": "0.1.0",
+  "Created By": "Ashley Chapman",
+  "theme": [
+    {
+      "type": "Editor_Schema",
+      "colors": {
+        "base": "#222222",
+        "primary": "#292929",
+        "secondary": "#363636"
+      }
+    },
+    {
+      "type": "InfoBar_Schema",
+      "colors": {
+        "base": "rgb(0, 168, 82)",
+        "sidepane": "rgba(0, 0, 0, 0.3)"
+      }
+    },
+    {
+      "type": "TextColor_Schema",
+      "colors": {
+        "base": "#ffffff",
+        "header": "#f9f9f9",
+        "subheader": "#f1f1f1",
+        "active": "#ffffff",
+        "notactive": "#999999"
+      }
+    },
+    {
+      "type": "Static_CSS_Schema",
+      "dir": "../styles/themes/zen-dark-theme/statics.css"
+    }
+  ]
+}

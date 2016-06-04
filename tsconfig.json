@@ -15,7 +15,6 @@
         "src/scripts/classes/interfaces.d.ts",
         "src/scripts/classes/Theme.ts",
         "src/scripts/classes/ThemeManager.ts",
-        "src/scripts/controllers/EditorController.ts",
         "src/scripts/redux/reducer.ts",
         "src/scripts/redux/store.ts",
         "src/scripts/themes/ZenDarkTheme.ts",
