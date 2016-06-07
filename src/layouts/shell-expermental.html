@@ -15,6 +15,7 @@
 
     <!--Controllers & Styles-->
     <script src="../scripts/controllers/EditorController.js"></script>
+    <script src="../scripts/controllers/ModulesController.js"></script>
     <link rel="stylesheet" href="../styles/DynamicTabs.css">
     <link rel="stylesheet" href="../styles/FABSpeedDial.css">
     <link rel="stylesheet" href="../styles/main.css">
@@ -22,14 +23,10 @@
       // Required Classes and dependencies
       var electron = require('electron');
       var fs = require('fs');
-      
+
       var themeManager = require("../scripts/classes/managers/ThemeManager.js");
       var fileManager = require("../scripts/classes/managers/FileManager.js");
     </script>
-
-    <!-- Create a simple CodeMirror instance -->
-    <link rel="stylesheet" href="../../bower_components/codemirror/lib/codemirror.css">
-    <script src="../../bower_components/codemirror/lib/codemirror.js"></script>
   </head>
   <body ng-app="Zen-Editor">
     <div id="application" class="AppComponent" ng-controller="EditorController as Editor">
@@ -103,29 +100,61 @@
           </div>
         </div>
         <div class="InfoBarComponent" ng-style="InfoBarStyle">
-            <div class="SidePaneSection" ng-style="SidePaneSectionStyle">
-              <div class="SidePaneTrayComponent">
-                <button id="Add_SidePaneTrayButton" class="TrayButtonComponent">
-                  <!--<AddIcon />-->
-                  <md-icon md-svg-src="../assets/img/icons/svgs/add_icon/ic_add_24px.svg" aria-label="Add File"></md-icon>
-                </button>
+            <div class="SidePaneTrayComponent" ng-style="SidePaneSectionStyle">
+                <md-menu class"AddFileMenu" md-offset="12 -92">
+                    <button id="Add_SidePaneTrayButton" class="TrayButtonComponent" ng-click="$mdOpenMenu($event)">
+                      <!--<AddIcon />-->
+                      <md-icon md-svg-src="../assets/img/icons/svgs/add_icon/ic_add_24px.svg" aria-label="Add File"></md-icon>
+                      <md-tooltip md-visible="false" md-direction="top">
+                          Add a File
+                      </md-tooltip>
+                    </button>
+                    <md-menu-content width="2">
+                        <md-menu-item>
+                            <md-button ng-click="">
+                                <md-icon md-menu-align-target md-svg-icon="../assets/img/icons/svgs/add_icon/ic_add_24px.svg"></md-icon>
+                                Add New File
+                            </md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                            <md-button ng-click="">
+                                <md-icon md-menu-align-target md-svg-icon="../assets/img/icons/svgs/existing_icon/ic_add_box_24px.svg"></md-icon>
+                                Add Existing File
+                            </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
                 <button id="NewFolder_SidePaneTrayButton" class="TrayButtonComponent">
                   <!--<NewFolderIcon />-->
                   <md-icon md-svg-src="../assets/img/icons/svgs/newfolder_icon/ic_create_new_folder_24px.svg" aria-label="Add Folder"></md-icon>
+                  <md-tooltip md-visible="false" md-direction="top">
+                      Add a Folder
+                  </md-tooltip>
                 </button>
                 <button id="Refresh_SidePaneTrayButton" class="TrayButtonComponent">
                   <!--<RefreshIcon />-->
                   <md-icon md-svg-src="../assets/img/icons/svgs/refresh_icon/ic_refresh_24px.svg" aria-label="Undo"></md-icon>
+                  <md-tooltip md-visible="false" md-direction="top">
+                      Refresh
+                  </md-tooltip>
                 </button>
 
                 <button id="Settings_SidePaneTrayButton" class="TrayButtonComponent SPTSettingsButton">
                   <!--<SettingsIcon />-->
                   <md-icon md-svg-src="../assets/img/icons/svgs/settings_icon/ic_settings_24px.svg" aria-label="Undo"></md-icon>
+                  <md-tooltip md-visible="false" md-direction="top">
+                      Settings
+                  </md-tooltip>
                 </button>
-              </div>
             </div>
             <div class="ContentViewTrayComponent">
-
+              <button id="SidePaneMenu_ContentViewTrayButton" class="TrayButtonComponent SidePaneMenuButton">
+                <!--<AddIcon />-->
+                <md-icon md-svg-src="../assets/img/icons/svgs/menu_icon/ic_menu_24px.svg" aria-label="Add File"></md-icon>
+                <md-tooltip md-visible="false" md-direction="top">
+                    Open/Collapse Menu
+                </md-tooltip>
+              </button>
             </div>
         </div>
       </div>

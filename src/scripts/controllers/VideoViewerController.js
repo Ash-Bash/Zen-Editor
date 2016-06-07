@@ -23,6 +23,8 @@
     var infobarSchema = themeData[1].colors;
     var textColorSchema = themeData[2].colors;
 
+    $scope.MainStaticsStyleFile = "../" + themeData[3].dir;
+
     $scope.BackgroundStyle = {
         'background-color': editorSchema.primary
     };

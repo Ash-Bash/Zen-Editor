@@ -17,12 +17,11 @@
     console.log(themeJsonData);
     var themeData = themeJsonData.theme;
 
-
-    //var theme = themeManager.ThemeManager('');
-
     var editorSchema = themeData[0].colors;
     var infobarSchema = themeData[1].colors;
     var textColorSchema = themeData[2].colors;
+
+    $scope.MainStaticsStyleFile = "../" + themeData[3].dir;
 
     $scope.BackgroundStyle = {
         'background-color': editorSchema.primary

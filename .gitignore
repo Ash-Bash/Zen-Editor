@@ -21,6 +21,7 @@ cache
 !SettingsMenuController.js
 !StartMenuController.js
 !VideoViewerController.js
+!ModulesController.js
 
 !ThemeManager.js
 !FileManager.js

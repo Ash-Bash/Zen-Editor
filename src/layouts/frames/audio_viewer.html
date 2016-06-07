@@ -19,19 +19,22 @@
 
         <script>
           // Required Classes and dependencies
-          var electron = require('electron');
-          var fs = require('fs');
+          var electron = window.parent.electron;
+          var fs = window.parent.fs;
 
-          var themeManager = require("../scripts/classes/managers/ThemeManager.js");
-          var fileManager = require("../scripts/classes/managers/FileManager.js");
+          var themeManager = window.parent.themeManager;
+          var fileManager = window.parent.fileManager;
         </script>
     </head>
      <body ng-app="Audio-Viewer">
-        <div ng-controller="AudioViewerController as AudioViewer" ng-style="BackgroundStyle" flex layout-fill>
+        <div ng-controller="AudioViewerController as AudioViewer" flex layout-fill>
+          <link rel="stylesheet" ng-href="{{MainStaticsStyleFile}}">
+          <div ng-style="BackgroundStyle" flex layout-fill>
             <div flex layout="column" role="main" class="md-whiteframe-z2">
                 <audio id="audio-viewer" class="md-whiteframe-8dp" controls preload>
                 </audio>
             </div>
+          </div>
         </div>
     </body>
 </html>

@@ -1,3 +1,19 @@
+h1 {
+  color: #f9f9f9 !important;
+}
+
+h2 {
+  color: #f1f1f1 !important;
+}
+
+h3 {
+  color: #999999 !important;
+}
+
+p {
+  color: white !important;
+}
+
 .md-tab.md-active span {
   color: white !important;
 }
@@ -12,9 +28,10 @@
 
 .CodeMirror-gutters {
   border-right: 0px solid #ddd;
-  background-color: #262626 !important;
+  background-color: #242424 !important;
 }
 
 .CodeMirror {
-  background: #181818 !important;
+  background: #292929 !important;
+  color: white !important;
 }

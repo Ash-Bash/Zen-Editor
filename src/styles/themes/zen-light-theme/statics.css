@@ -1,3 +1,19 @@
+h1 {
+  color: #111111 !important;
+}
+
+h2 {
+  color: #222222 !important;
+}
+
+h3 {
+  color: #424242 !important;
+}
+
+p {
+  color: black !important;
+}
+
 .md-tab.md-active span {
   color: #181818 !important;
 }
@@ -17,4 +33,5 @@
 
 .CodeMirror {
   background: white !important;
+  color: black !important;
 }

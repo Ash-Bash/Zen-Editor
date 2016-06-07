@@ -7,12 +7,6 @@
 
         var ipc = electron.ipcRenderer;
 
-        var themeListJSONData = {};
-        /*fileManager.readJSONFile("../styles/themes/theme_list.json", function(text) {
-          themeListJSONData = angular.toJson(text);
-          console.log(text);
-        });*/
-
         var themeListJsonFile = fs.readFileSync('./src/styles/themes/theme_list.json');
         var themeListData = JSON.parse(themeListJsonFile);
         var themeList = themeListData.list;

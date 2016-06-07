@@ -19,11 +19,11 @@
 
         <script>
           // Required Classes and dependencies
-          var electron = require('electron');
-          var fs = require('fs');
+          var electron = window.parent.electron;
+          var fs = window.parent.fs;
 
-          var themeManager = require("../scripts/classes/managers/ThemeManager.js");
-          var fileManager = require("../scripts/classes/managers/FileManager.js");
+          var themeManager = window.parent.themeManager;
+          var fileManager = window.parent.fileManager;
         </script>
 
         <!-- Create a simple CodeMirror instance -->

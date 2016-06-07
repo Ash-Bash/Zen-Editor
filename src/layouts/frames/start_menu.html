@@ -19,24 +19,22 @@
 
         <script>
           // Required Classes and dependencies
-          var electron = require('electron');
-          var fs = require('fs');
+          var electron = window.parent.electron;
+          var fs = window.parent.fs;
 
-          var themeManager = require("../scripts/classes/managers/ThemeManager.js");
-          var fileManager = require("../scripts/classes/managers/FileManager.js");
+          var themeManager = window.parent.themeManager;
+          var fileManager = window.parent.fileManager;
         </script>
     </head>
     <body ng-app="Start-Menu">
-        <div ng-controller="StartMenuController as StartMenu" style="width:100%" flex layout-fill ng-style="BackgroundStyle">
+        <div ng-controller="StartMenuController as StartMenu" flex layout-fill ng-style="BackgroundStyle">
+          <div ng-style="BackgroundStyle" flex layout-fill>
+            <link rel="stylesheet" ng-href="{{MainStaticsStyleFile}}">
             <div layout="column" role="main" class="md-whiteframe-z2" flex layout-fill>
-                    <h1 id="StartUpTitleHeader" class="md-display-2">Welcome To Zen Code Editor</h1>
-                    <md-button id="OpenExistingDirButton" class="md-raised md-primary">Open A Existing Directory</md-button>
+              <h1 id="StartUpTitleHeader" class="md-display-2">Welcome To Zen Code Editor</h1>
+              <md-button id="OpenExistingDirButton" class="md-raised md-primary">Open A Existing Directory</md-button>
             </div>
+          </div>
         </div>
-
-        <script>
-            // You can also require other files to run in this process
-            require('../../scripts/renderer.js')
-        </script>
     </body>
 </html>
